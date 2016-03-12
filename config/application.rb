@@ -69,6 +69,8 @@ module FatFreeCRM
     config.filter_parameters += [:password, :password_hash, :password_salt, :password_confirmation]
 
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.log_level = :debug
   end
 end
 

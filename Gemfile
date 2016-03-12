@@ -79,3 +79,5 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
+gem 'mysql2'
+gem 'rails_12factor', group: :production
