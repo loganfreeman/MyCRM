@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  site:
+    title: "Sightseeing management Portal"
+  user_types:
+    label: "Groups"
+    admin: "Administrator"
+    operator: "Operator"
+    guide: 'Guide'
+    finance: 'Finance'

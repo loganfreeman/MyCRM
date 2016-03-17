@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get 'activities' => 'home#index'
   get 'admin'      => 'admin/users#index',       :as => :admin
+  get 'operator'   => 'operator#index',    :as => :operator
+  get 'finance'    => 'finance#index',     :as => :finance
+  get 'guide'      => 'guide#index',       :as => :guide
   get 'login'      => 'authentications#new',     :as => :login
   delete 'logout'  => 'authentications#destroy', :as => :logout
   get 'profile'    => 'users#show',              :as => :profile
@@ -149,6 +152,15 @@ Rails.application.routes.draw do
       match :auto_complete, via: [:get, :post]
       get :opportunities_overview
     end
+  end
+
+  namespace :operator do
+  end
+
+  namespace :guide do
+  end
+
+  namespace :finance do
   end
 
   namespace :admin do

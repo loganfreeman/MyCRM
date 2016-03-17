@@ -10,6 +10,12 @@
       = link_to(t(:profile), profile_path) << " |"
       - if current_user.admin?
         = link_to(t(:admin), admin_path) << " |"
+      - if current_user.operator?
+        = link_to(t(:operator), operator_path) << " |"
+      - if current_user.guide?
+        = link_to(t(:guide), guide_path) << " |"
+      - if current_user.finance?
+        = link_to(t(:finance), finance_path) << " |"
       = link_to(t(:logout), logout_path, :method => :delete)
       = render "/layouts/jumpbox"
     - else
@@ -17,4 +23,4 @@
       = link_to(t(:sign_up), signup_path) << " |" if can_signup?
       = link_to(t(:about), "#", :title => t(:about_ffc), :onclick => "$('#about').dialog({ title: this.title, modal: true }); return false;")
   %h3
-    = link_to("Fat Free CRM", root_path)
+    = link_to(t(:site)[:title], root_path)

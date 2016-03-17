@@ -91,6 +91,18 @@ class User < ActiveRecord::Base
 
   validates_presence_of :email, message: :missing_email
 
+  def operator?
+    groups.exists?(name: 'operator')
+  end
+
+  def guide?
+    groups.exists?(name: 'guide')
+  end
+
+  def finance?
+    groups.exists?(name: 'finance')
+  end
+
   #----------------------------------------------------------------------------
   def name
     first_name.blank? ? username : first_name
