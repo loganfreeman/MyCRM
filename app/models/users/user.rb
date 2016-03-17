@@ -92,15 +92,15 @@ class User < ActiveRecord::Base
   validates_presence_of :email, message: :missing_email
 
   def operator?
-    groups.exists?(name: 'operator')
+    !user_type.nil? && 'operator'.casecmp(user_type) == 0
   end
 
   def guide?
-    groups.exists?(name: 'guide')
+    !user_type.nil? && 'guide'.casecmp(user_type) == 0
   end
 
   def finance?
-    groups.exists?(name: 'finance')
+    !user_type.nil? && 'finance'.casecmp(user_type) == 0
   end
 
   #----------------------------------------------------------------------------

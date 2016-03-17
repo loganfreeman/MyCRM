@@ -24,6 +24,10 @@
           = f.check_box(:admin, { :disabled => edit && @user == current_user })
           %label{:for => 'user_admin'}
             = t(:user_is_admin)
+      %td(colspan=3)
+        %label{:for => 'user_type'}
+          = t(:user_type_label)
+        = f.select :user_type, options_for_select(t(:user_types))
 
 .subtitle #{t :personal_information}
 .section
