@@ -104,7 +104,6 @@ class Admin::UsersController < Admin::ApplicationController
 
   def user_params
     params[:user].permit(
-      :user_type,
       :admin,
       :username,
       :email,
