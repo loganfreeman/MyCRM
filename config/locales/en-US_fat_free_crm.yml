@@ -32,10 +32,10 @@ en-US:
   admin_tab_tags: Tags
   admin_tab_settings: Settings
   admin_tab_plugins: Plugins
-  admin_tab_resources: Resources
+  admin_tab_customers: Customers
   admin_tab_finances: Finance
   admin_tab_operators: Operators
-  admin_tab_itineraries: Itineraries  
+  admin_tab_itineraries: Itineraries
   affiliate: Affiliate
   competitor: Competitor
   customer: Customer

@@ -261,10 +261,10 @@
   :url:
     :controller: admin/tags
 - :active: false
-  :text: :admin_tab_resources
-  :icon: :fa-resources
+  :text: :admin_tab_customers
+  :icon: :fa-customers
   :url:
-    :controller: admin/resources
+    :controller: admin/customers
 - :active: false
   :text: :admin_tab_finances
   :icon: :fa-finance

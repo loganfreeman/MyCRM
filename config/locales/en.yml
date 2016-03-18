@@ -24,6 +24,8 @@ en:
   site:
     title: "Sightseeing management Portal"
   user_type_label: User Type
+  create_customer: Create Customer
+  customers: Customers
   user_types:
     operator: "Operator"
     guide: 'Guide'

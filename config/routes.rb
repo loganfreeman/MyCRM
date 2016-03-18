@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'activities' => 'home#index'
   get 'admin'      => 'admin/users#index',       :as => :admin
-  get 'resources'   => 'admin/resources#index',    :as => :resources
+  get 'customers'   => 'admin/customers#index',    :as => :customers
   get 'itineraries'   => 'admin/itineraries#index',    :as => :itineraries
   get 'finances'   => 'admin/finances#index',    :as => :finances
   get 'operators'   => 'admin/operators#index',    :as => :operators
@@ -166,6 +166,11 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :groups
+
+    resources :customers do
+
+
+    end
 
     resources :users do
       collection do

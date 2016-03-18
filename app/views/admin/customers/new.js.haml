@@ -1,0 +1,9 @@
+crm.flip_form('create_customer');
+
+- unless params[:cancel].true?
+  $('#create_customer').html('#{ j render(:partial => "new") }');
+  $('#empty').html('');
+  crm.set_title('create_customer', '#{t(:create_customer)}');
+
+- else
+  crm.set_title('create_customer', '#{t(:customers)}');
