@@ -260,6 +260,26 @@
   :icon: :fa-tags
   :url:
     :controller: admin/tags
+- :active: false
+  :text: :admin_tab_resources
+  :icon: :fa-resources
+  :url:
+    :controller: admin/resources
+- :active: false
+  :text: :admin_tab_finances
+  :icon: :fa-finance
+  :url:
+    :controller: admin/finances
+- :active: false
+  :text: :admin_tab_itineraries
+  :icon: :fa-itineraries
+  :url:
+    :controller: admin/itineraries
+- :active: false
+  :text: :admin_tab_operators
+  :icon: :fa-operators
+  :url:
+    :controller: admin/operators
 #- :active: false
 #  :text: :admin_tab_settings
 #  :icon: :fa-cogs

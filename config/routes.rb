@@ -10,9 +10,10 @@ Rails.application.routes.draw do
 
   get 'activities' => 'home#index'
   get 'admin'      => 'admin/users#index',       :as => :admin
-  get 'operator'   => 'operator#index',    :as => :operator
-  get 'finance'    => 'finance#index',     :as => :finance
-  get 'guide'      => 'guide#index',       :as => :guide
+  get 'resources'   => 'admin/resources#index',    :as => :resources
+  get 'itineraries'   => 'admin/itineraries#index',    :as => :itineraries
+  get 'finances'   => 'admin/finances#index',    :as => :finances
+  get 'operators'   => 'admin/operators#index',    :as => :operators
   get 'login'      => 'authentications#new',     :as => :login
   delete 'logout'  => 'authentications#destroy', :as => :logout
   get 'profile'    => 'users#show',              :as => :profile

@@ -1,0 +1,2 @@
+module Admin::ItinerariesHelper
+end

@@ -1,0 +1,2 @@
+module Admin::OperatorsHelper
+end
