@@ -4,8 +4,8 @@
 
   = f.error_messages :object_name => t('customer')
 
-  = render "admin/users/profile", :f => f
+  = render "admin/customers/profile", :f => f
   .buttonbar
-    = f.submit t(:create_user)
+    = f.submit t(:create_customer)
     #{t :or}
-    = link_to_cancel new_admin_user_path
+    = link_to_cancel new_admin_customer_path

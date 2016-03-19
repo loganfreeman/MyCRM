@@ -2,9 +2,9 @@
   = link_to_inline(:create_customer, new_admin_customer_path, :text => t(:create_customer))
 
 .title
-  %span#create_user_title #{t :customers}
+  %span#create_customer_title #{t :customers}
   = image_tag("loading.gif", :size => :thumb, :id => "loading", :style => "display: none;")
-.remote#create_user{ hidden }
+.remote#create_customer{ hidden }
 
 .list#users= render :partial => "admin/customers/customer", :collection => @customers
 #export= render "shared/export"

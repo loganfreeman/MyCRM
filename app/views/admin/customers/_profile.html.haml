@@ -1,0 +1,15 @@
+- edit ||= false
+.section
+  %table
+    %tr
+      %td
+        .label #{t :first_name}:
+        = f.text_field :first_name
+      %td= spacer
+      %td
+        .label #{t :last_name}:
+        = f.text_field :last_name
+    %tr
+      %td
+        .label #{t :company}:
+        = f.text_field :company

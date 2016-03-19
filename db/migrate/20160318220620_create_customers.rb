@@ -1,7 +1,8 @@
 class CreateCustomers < ActiveRecord::Migration
   def self.up
     create_table :customers do |t|
-      t.column :name, :string
+      t.column :first_name, :string
+      t.column :last_name, :string
       t.column :company, :string
       t.column :address, :text
       t.column :phone, :string
