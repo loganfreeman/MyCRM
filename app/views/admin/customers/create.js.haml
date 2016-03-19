@@ -1,0 +1,9 @@
+- if @customer.valid?
+  $('#create_customer_arrow').html(crm.COLLAPSED);
+  $('#create_customer_title').html('#{t(:customers)}');
+  $('#create_customer').slideUp(250);
+  $('#customers').prepend('#{ j (render :partial => "customer", :collection => [ @customer ]) }');
+  $('##{dom_id(@customer)}').effect("highlight", { duration:1500 });
+- else
+  $('#create_customer').html('#{ j (render :partial => "new") }');
+  $('#create_customer').effect("shake", { duration:250, distance: 6 });

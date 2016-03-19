@@ -6,5 +6,5 @@
   = image_tag("loading.gif", :size => :thumb, :id => "loading", :style => "display: none;")
 .remote#create_customer{ hidden }
 
-.list#users= render :partial => "admin/customers/customer", :collection => @customers
+.list#customers= render :partial => "admin/customers/customer", :collection => @customers
 #export= render "shared/export"

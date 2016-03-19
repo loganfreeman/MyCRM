@@ -15,7 +15,22 @@ class Admin::CustomersController < ApplicationController
     respond_with(@customer)
   end
 
+  def create
+    @customer = Customer.new(customer_params)
+    respond_with(@customer)
+  end
+
   def load_resources
     @customers = Customer.all
+  end
+
+  def customer_params
+    params[:customer].permit(
+      :email,
+      :first_name,
+      :last_name,
+      :company,
+      :phone,
+    )
   end
 end
