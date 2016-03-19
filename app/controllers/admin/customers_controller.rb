@@ -16,7 +16,7 @@ class Admin::CustomersController < ApplicationController
   end
 
   def create
-    @customer = Customer.new(customer_params)
+    @customer = Customer.create(customer_params)
     respond_with(@customer)
   end
 
