@@ -1,4 +1,4 @@
-class Admin::CustomersController < ApplicationController
+class Admin::CustomersController < Admin::ApplicationController
   before_action "set_current_tab('admin/customers')", only: [:index, :show]
 
   load_and_authorize_resource # handles all security

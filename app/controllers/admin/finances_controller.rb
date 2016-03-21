@@ -1,2 +1,2 @@
-class Admin::FinancesController < ApplicationController
+class Admin::FinancesController < Admin::ApplicationController
 end

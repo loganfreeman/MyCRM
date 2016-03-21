@@ -1,4 +1,4 @@
-class Admin::ItinerariesController < ApplicationController
+class Admin::ItinerariesController < Admin::ApplicationController
   def index
   end
 end
