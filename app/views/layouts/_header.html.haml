@@ -11,11 +11,11 @@
       - if current_user.admin?
         = link_to(t(:admin), admin_path) << " |"
       - if current_user.operator?
-        = link_to(t(:admin), operator_path) << " |"
-      - if current_user.finance?
-        = link_to(t(:admin), finance_path) << " |"
+        = link_to(t(:operator), operator_path) << " |"
+      - if current_user.accountant?
+        = link_to(t(:accountant), accountant_path) << " |"
       - if current_user.guide?
-        = link_to(t(:admin), guide_path) << " |"
+        = link_to(t(:guide), guide_path) << " |"
       = link_to(t(:logout), logout_path, :method => :delete)
       = render "/layouts/jumpbox"
     - else

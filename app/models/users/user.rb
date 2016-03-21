@@ -99,8 +99,8 @@ class User < ActiveRecord::Base
     !user_type.nil? && 'guide'.casecmp(user_type) == 0
   end
 
-  def finance?
-    !user_type.nil? && 'finance'.casecmp(user_type) == 0
+  def accountant?
+    !user_type.nil? && 'accountant'.casecmp(user_type) == 0
   end
 
   #----------------------------------------------------------------------------

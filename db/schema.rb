@@ -181,6 +181,16 @@ ActiveRecord::Schema.define(version: 20160318220620) do
   add_index "contacts", ["assigned_to"], name: "index_contacts_on_assigned_to", using: :btree
   add_index "contacts", ["user_id", "last_name", "deleted_at"], name: "id_last_name_deleted", unique: true, using: :btree
 
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "company"
+    t.text   "address"
+    t.string "phone"
+    t.string "email"
+    t.string "website"
+  end
+
   create_table "emails", force: :cascade do |t|
     t.string   "imap_message_id",                                 null: false
     t.integer  "user_id"

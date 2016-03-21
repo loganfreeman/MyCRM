@@ -46,7 +46,8 @@ describe User do
       username: "username",
       email:    "user@example.com",
       password: "password",
-      password_confirmation: "password"
+      password_confirmation: "password",
+      user_type: "Accountant"
     )
   end
 

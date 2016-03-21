@@ -1,0 +1,2 @@
+class AccountantController < ApplicationController
+end

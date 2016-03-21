@@ -22,6 +22,11 @@
           %td
             .label.top #{t :company}:
             = f.text_field :company
+        %tr
+          %td
+            %label{:for => 'user_type'}
+              = t(:user_type_label)
+            = f.select :user_type, options_for_select(t(:user_types), :selected => @user[:user_type])
     .subtitle #{t :contact_info}
     .section
       %table

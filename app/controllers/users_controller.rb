@@ -134,21 +134,7 @@ class UsersController < ApplicationController
   protected
 
   def user_params
-    params[:user].permit(
-      :username,
-      :email,
-      :first_name,
-      :last_name,
-      :title,
-      :company,
-      :alt_email,
-      :phone,
-      :mobile,
-      :aim,
-      :yahoo,
-      :google,
-      :skype
-    )
+    params[:user].permit!
   end
 
   def avatar_params

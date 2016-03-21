@@ -57,7 +57,7 @@ class Admin::UsersController < Admin::ApplicationController
   def update
     params[:user][:password_confirmation] = nil if params[:user][:password_confirmation].blank?
     @user = User.find(params[:id])
-    @user.attributes = user_params
+    @user.update_attributes(user_params)
     @user.save_without_session_maintenance
 
     respond_with(@user)
@@ -103,26 +103,7 @@ class Admin::UsersController < Admin::ApplicationController
   protected
 
   def user_params
-    params[:user].permit(
-      :user_type,
-      :admin,
-      :username,
-      :email,
-      :first_name,
-      :last_name,
-      :title,
-      :company,
-      :alt_email,
-      :phone,
-      :mobile,
-      :aim,
-      :yahoo,
-      :google,
-      :skype,
-      :password,
-      :password_confirmation,
-      group_ids: []
-    )
+    params[:user].permit!
   end
 
   private

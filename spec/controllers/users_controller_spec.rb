@@ -151,7 +151,7 @@ describe UsersController do
 
       it "exposes a newly created user as @user and redirect to profile page" do
         require_user(admin: true)
-        post :create, user: { username: @username, email: @email, password: @password, password_confirmation: @password }
+        post :create, user: { username: @username, email: @email, password: @password, password_confirmation: @password, user_type: "Accountant" }
         expect(assigns[:user]).to eq(@user)
         expect(flash[:notice]).to match(/welcome/)
         expect(response).to redirect_to(profile_path)
@@ -191,10 +191,11 @@ describe UsersController do
 
     describe "with valid params" do
       it "should update user information and render [update] template" do
-        xhr :put, :update, id: @user.id, user: { first_name: "Billy", last_name: "Bones" }
+        xhr :put, :update, id: @user.id, user: { first_name: "Billy", last_name: "Bones", user_type: "Accountant" }
         @user.reload
         expect(@user.first_name).to eq("Billy")
         expect(@user.last_name).to eq("Bones")
+        expect(@user.user_type).to eq("Accountant")
         expect(assigns[:user]).to eq(@user)
         expect(response).to render_template("users/update")
       end

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get 'activities' => 'home#index'
   get 'admin'      => 'admin/users#index',       :as => :admin
+  get 'accountant'      => 'accountant#index',       :as => :accountant
+  get 'guide'      => 'guide#index',       :as => :guide
+  get 'operator'      => 'operator#index',       :as => :operator
   get 'admin/customers'   => 'admin/customers#index',    :as => :customers
   get 'admin/itineraries'   => 'admin/itineraries#index',    :as => :itineraries
   get 'admin/finances'   => 'admin/finances#index',    :as => :finances
