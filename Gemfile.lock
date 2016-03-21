@@ -113,6 +113,7 @@ GEM
       railties (>= 3.0.0)
     ffaker (2.1.0)
     ffi (1.9.10)
+    ffi (1.9.10-x64-mingw32)
     ffi-compiler (0.1.3)
       ffi (>= 1.0.0)
       rake
@@ -169,11 +170,14 @@ GEM
     minitest (5.8.4)
     multi_json (1.11.2)
     mysql2 (0.3.20)
+    mysql2 (0.3.20-x64-mingw32)
     nenv (0.2.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.1)
     nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.7.2-x64-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
     notiffany (0.0.8)
       nenv (~> 0.1)
@@ -189,6 +193,7 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.4)
+    pg (0.18.4-x64-mingw32)
     polyamorous (1.3.0)
       activerecord (>= 3.0)
     premailer (1.8.6)
@@ -321,6 +326,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.11)
+    sqlite3 (1.3.11-x64-mingw32)
     sshkit (1.8.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -337,6 +343,8 @@ GEM
     timecop (0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2016.2)
+      tzinfo (>= 1.0.0)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -354,6 +362,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   acts-as-taggable-on (>= 3.4.3)
@@ -419,6 +428,7 @@ DEPENDENCIES
   thin
   thor
   timecop
+  tzinfo-data
   uglifier
   unicorn
   will_paginate
