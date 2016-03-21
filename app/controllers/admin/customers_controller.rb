@@ -8,6 +8,17 @@ class Admin::CustomersController < ApplicationController
     render :locals => { :customers => @customers }
   end
 
+  # GET /admin/customers/1
+  # GET /admin/customers/1.xml
+  #----------------------------------------------------------------------------
+  def show
+    respond_with(@customer)
+  end
+
+  def edit
+    respond_with(@customer)
+  end
+
   # GET /users/new
   # GET /users/new.js
   #----------------------------------------------------------------------------

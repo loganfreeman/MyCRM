@@ -1,0 +1,20 @@
+- id = dom_id(@customer)
+
+- if params[:cancel].true?     # <----------------- Hide [Edit customer]
+  $('##{id}').replaceWith('#{ j render(:partial => "customer", :collection => [ @customer ]) }');
+
+- else # <----------------------------------------  Show [Edit customer] form.
+
+  - if @previous                                    # Hide open [Edit customer] form if any.
+    - if @previous.is_a?(customer)                      # Previous customer still exists?
+      $('##{dom_id(@previous)}').replaceWith('#{ j render(:partial => "customer", :collection => [ @previous ]) }');
+    - else
+      crm.flick('customer_#{@previous}', 'remove');
+
+  -# Disable onMouseOver for the list item.
+  -# Hide [Create customer] form if any.
+  -# Show [Edit customer] form.
+  crm.highlight_off('#{id}');
+  crm.hide_form('create_customer');
+  $('##{id}').html('#{ j render(:partial => "edit") }');
+  $('#customer_customername').focus();

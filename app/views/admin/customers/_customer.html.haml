@@ -1,0 +1,6 @@
+%li.highlight[customer]
+  .indentfull
+    .tools
+      = link_to_edit(customer, :url => edit_admin_customer_path(customer)) << " | "
+
+    %span.black #{link_to( customer.full_name, admin_customer_path(customer))} (#{customer.full_name})
