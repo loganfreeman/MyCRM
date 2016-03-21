@@ -34,3 +34,4 @@ Design
 *~
 *.swp
 *.gem
+Gemfile.lock

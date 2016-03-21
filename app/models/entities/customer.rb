@@ -3,6 +3,8 @@ class Customer < ActiveRecord::Base
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
                               allow_nil: true, allow_blank: true
 
+  has_fields
+  exportable
 
   def pretty_name
     result = []

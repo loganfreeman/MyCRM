@@ -5,7 +5,10 @@ class Admin::CustomersController < ApplicationController
 
   def index
     load_resources
-    render :locals => { :customers => @customers }
+    respond_with @customers do |format|
+      format.xls { render layout: 'header' }
+      format.csv { render csv: @customers }
+    end
   end
 
   # GET /admin/customers/1

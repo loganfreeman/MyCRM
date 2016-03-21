@@ -27,6 +27,7 @@ en:
   create_customer: Create Customer
   save_customer: Save Customer
   customers: Customers
+  tab_customers: Customers
   operators: Operators
   guides: Guides
   finances: Finances
