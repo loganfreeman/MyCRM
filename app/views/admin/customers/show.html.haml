@@ -1,5 +1,4 @@
 .title= h(@customer.full_name)
 %p
 :erb
-  <%= link_to_edit @customer, :url => edit_admin_customer_path(@customer) %> |
   <%= link_to t(:back), admin_customers_path %>

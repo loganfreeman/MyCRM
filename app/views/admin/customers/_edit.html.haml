@@ -1,0 +1,11 @@
+.remote
+  = form_for([:admin, @customer], :html => one_submit_only.merge({:autocomplete => 'off'}), :remote => true) do |f|
+    = link_to_close edit_admin_customer_path(@customer)
+
+    = f.error_messages :object_name => t('customer')
+
+    = render "admin/customers/profile", :f => f, :edit => true
+    .buttonbar
+      = f.submit t(:save_customer)
+      #{t :or}
+      = link_to_cancel edit_admin_customer_path(@customer)

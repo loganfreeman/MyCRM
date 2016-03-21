@@ -31,6 +31,14 @@ class Admin::CustomersController < ApplicationController
     respond_with(@customer)
   end
 
+  def update
+    @customer = Customer.find(params[:id])
+    @customer.attributes = customer_params
+    @customer.save
+
+    respond_with(@customer)
+  end
+
   def load_resources
     @customers = Customer.all
   end
