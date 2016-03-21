@@ -8,6 +8,8 @@
 
 .remote#options{ hidden }
 
+= simple_table_for @contacts, with: ContactTable
+
 .list#contacts
   - if @contacts.any?
     = render @contacts

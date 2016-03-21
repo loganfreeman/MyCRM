@@ -30,7 +30,8 @@ module FatFreeCRM
 
     # Models are organized in sub-directories
     config.autoload_paths += Dir[Rails.root.join("app/models/**")] +
-                             Dir[Rails.root.join("app/controllers/entities")]
+                             Dir[Rails.root.join("app/controllers/entities")] +
+                             Dir[Rails.root.join("app/tables/**")]
 
     # Prevent Field class from being reloaded more than once as this clears registered customfields
     config.autoload_once_paths += [File.expand_path("../app/models/fields/field.rb", __FILE__)]

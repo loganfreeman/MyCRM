@@ -6,6 +6,21 @@
 $color_title: #342d7e;
 $color_subtitle: darkslateblue;
 $sidebar_width: 210px;
+$th_background: lightblue;
+
+.table-bordered {
+  td, th {
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  th {
+    background: $th_background;
+    border-color: white;
+  }
+}
+
 
 // Common page elements.
 //------------------------------------------------------------------------------

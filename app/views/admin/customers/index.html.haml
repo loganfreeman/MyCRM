@@ -9,4 +9,5 @@
 .remote#create_customer{ hidden }
 
 .list#customers= render :partial => "admin/customers/customer", :collection => @customers
+= simple_table_for @customers, with: CustomerTable
 #export= render "shared/export"

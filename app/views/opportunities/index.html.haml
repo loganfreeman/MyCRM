@@ -6,6 +6,8 @@
 
 = render 'search'
 
+= simple_table_for @opportunities, with: OpportunityTable
+
 .remote#options{ hidden }
 
 .list#opportunities
