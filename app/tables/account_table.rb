@@ -1,8 +1,8 @@
-class OpportunityTable < TableCloth::Base
+class AccountTable < TableCloth::Base
   # Define columns with the #column method
-  column :name, :assigned_to
+  column :name, :email
 
-  Opportunity.fields.each do |field|
+  Account.fields.each do |field|
     column field.label do |object|
       object.send(field.name.to_sym)
     end

@@ -1,6 +1,11 @@
 class CampaignTable < TableCloth::Base
   # Define columns with the #column method
   column :name, :status
+  Campaign.fields.each do |field|
+    column field.label do |object|
+      object.send(field.name.to_sym)
+    end
+  end
 
   # Columns can be provided a block
   #

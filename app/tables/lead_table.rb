@@ -2,6 +2,12 @@ class LeadTable < TableCloth::Base
   # Define columns with the #column method
   column :first_name, :last_name, :email
 
+  Lead.fields.each do |field|
+    column field.label do |object|
+      object.send(field.name.to_sym)
+    end
+  end
+
   # Columns can be provided a block
   #
   # column :name do |object|
