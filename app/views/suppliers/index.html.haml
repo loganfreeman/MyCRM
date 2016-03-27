@@ -1,0 +1,12 @@
+.title_tools
+  .create_asset
+    = link_to(t(:create_hotel), new_hotel_path, :id => :create_hotel)
+
+.title
+  %span#title #{t :my_hotels}
+%ul.list#hotels
+  - unless @my_hotels.empty?
+    = render :partial => "home/task", :collection => @my_hotels.limit(10)
+    = show_hidden_entities_message(@my_hotels.count, 'hotel', 10)
+  - else
+    #{t :no_hotel_records}

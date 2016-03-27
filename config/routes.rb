@@ -62,6 +62,25 @@ Rails.application.routes.draw do
   resources :exibitions, id: /\d+/ do
   end
 
+  resources :hotels, id: /\d+/ do
+    collection do
+    end
+    member do
+    end
+  end
+
+  resources :restaurants, id: /\d+/ do
+  end
+
+  resources :parks, id: /\d+/ do
+  end
+
+  resources :transports, id: /\d+/ do
+  end
+
+  resources :entertainments, id: /\d+/ do
+  end
+
   resources :campaigns, id: /\d+/ do
     collection do
       get :advanced_search

@@ -315,6 +315,10 @@ en-US:
   remember_me: Remember Me
   sign_up_now: Sign Up Now!
 
+  # Views -> Hotels
+  hotel: Hotel
+  create_hotel: Create Hotel
+
   # Views -> Accounts.
   #----------------------------------------------------------------------------
   account: Account
@@ -592,7 +596,9 @@ en-US:
   all_events_past_participle: Activities
   action_create_comment: ! '- &quot;%{comment}&quot;'
   my_tasks: My Tasks
+  my_hotels: My Hotels
   no_task_records: You have no tasks.
+  no_hotel_records: You have no hotels.
   my_opportunities: My Opportunities
   no_opportunity_records: You have no opportunities.
   my_accounts: My Accounts
