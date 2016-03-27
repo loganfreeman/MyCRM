@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321201007) do
+ActiveRecord::Schema.define(version: 20160327171517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -137,6 +137,23 @@ ActiveRecord::Schema.define(version: 20160321201007) do
     t.string   "state",            limit: 16, default: "Expanded", null: false
   end
 
+  create_table "conferences", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.date     "starts_on"
+    t.date     "ends_on"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "conferences", ["assigned_to"], name: "index_conferences_on_assigned_to", using: :btree
+  add_index "conferences", ["user_id", "name", "deleted_at"], name: "index_conferences_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
   create_table "contact_opportunities", force: :cascade do |t|
     t.integer  "contact_id"
     t.integer  "opportunity_id"
@@ -182,13 +199,15 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   add_index "contacts", ["user_id", "last_name", "deleted_at"], name: "id_last_name_deleted", unique: true, using: :btree
 
   create_table "customers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "company"
-    t.text   "address"
-    t.string "phone"
-    t.string "email"
-    t.string "website"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company"
+    t.text     "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "emails", force: :cascade do |t|
@@ -212,6 +231,14 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   end
 
   add_index "emails", ["mediator_id", "mediator_type"], name: "index_emails_on_mediator_id_and_mediator_type", using: :btree
+
+  create_table "emp_data", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "field_groups", force: :cascade do |t|
     t.string   "name",       limit: 64

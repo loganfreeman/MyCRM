@@ -4,11 +4,13 @@
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
 Rails.application.routes.draw do
+  mount API => '/'
   resources :lists
 
   root to: 'home#index'
 
   get 'activities' => 'home#index'
+  get 'resources' => 'resources#index'
   get 'admin'      => 'admin/users#index',       :as => :admin
   get 'accountant'      => 'accountant#index',       :as => :accountant
   get 'guide'      => 'guide#index',       :as => :guide

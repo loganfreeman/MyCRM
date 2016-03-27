@@ -14,11 +14,17 @@ en-US:
   select_none: -- None --
   select_blank: -- Select --
   yes_button: 'Yes'
+  overview: Overview
+  client: Clients
+  supplier: Suppliers
+  conference: Conferences
+  exibition: Exibitions
 
 
   # Settings.
   #----------------------------------------------------------------------------
   tab_dashboard: Dashboard
+  tab_resources: Resources
   tab_tasks: Tasks
   tab_campaigns: Campaigns
   tab_leads: Leads
@@ -52,7 +58,7 @@ en-US:
   converted: Converted
   rejected: Rejected
   cold_call: Cold Call
-  conference: Conference
+  conference: Conferences
   online: Online Marketing
   referral: Referral
   self: Self Generated
@@ -590,6 +596,9 @@ en-US:
   my_opportunities: My Opportunities
   no_opportunity_records: You have no opportunities.
   my_accounts: My Accounts
+  my_suppliers: My Suppliers
+  my_conferences: My Conferences
+  my_exibitions: My Exibitions
   no_account_records: You have no accounts
   not_showing_hidden_entities: Not showing %{count} hidden %{entity}.
 
