@@ -58,6 +58,9 @@ Rails.application.routes.draw do
   resources :conferences, id: /\d+/ do
   end
 
+  resources :exibitions, id: /\d+/ do
+  end
+
   resources :campaigns, id: /\d+/ do
     collection do
       get :advanced_search

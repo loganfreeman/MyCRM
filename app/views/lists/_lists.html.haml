@@ -3,7 +3,7 @@
   %li= link_to(t(:client), :controller => :resources, :view => :client)
   %li= link_to(t(:supplier), :controller => :resources, :view => :supplier)
   %li= link_to(t(:conference), :controller => :conferences, :view => :conference)
-  %li= link_to(t(:exibition), :controller => :resources, :view => :exibition)
+  %li= link_to(t(:exibition), :controller => :exibitions, :view => :exibition)
 
 
 - @global_lists = List.where(:user_id => nil)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327171517) do
+ActiveRecord::Schema.define(version: 20160327185218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -239,6 +239,23 @@ ActiveRecord::Schema.define(version: 20160327171517) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "exibitions", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.date     "starts_on"
+    t.date     "ends_on"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "exibitions", ["assigned_to"], name: "index_exibitions_on_assigned_to", using: :btree
+  add_index "exibitions", ["user_id", "name", "deleted_at"], name: "index_exibitions_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "field_groups", force: :cascade do |t|
     t.string   "name",       limit: 64
