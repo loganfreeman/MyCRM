@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'activities' => 'home#index'
   get 'resources' => 'resources#index'
+  get 'suppliers' => 'suppliers#index'
   get 'admin'      => 'admin/users#index',       :as => :admin
   get 'accountant'      => 'accountant#index',       :as => :accountant
   get 'guide'      => 'guide#index',       :as => :guide
