@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328161328) do
+ActiveRecord::Schema.define(version: 20160328214209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,17 +138,18 @@ ActiveRecord::Schema.define(version: 20160328161328) do
   end
 
   create_table "conferences", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.date     "starts_on"
     t.date     "ends_on"
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subscribed_users"
   end
 
   add_index "conferences", ["assigned_to"], name: "index_conferences_on_assigned_to", using: :btree
@@ -242,32 +243,34 @@ ActiveRecord::Schema.define(version: 20160328161328) do
   end
 
   create_table "entertainments", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subscribed_users"
   end
 
   add_index "entertainments", ["assigned_to"], name: "index_entertainments_on_assigned_to", using: :btree
   add_index "entertainments", ["user_id", "name", "deleted_at"], name: "index_entertainments_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "exibitions", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.date     "starts_on"
     t.date     "ends_on"
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subscribed_users"
   end
 
   add_index "exibitions", ["assigned_to"], name: "index_exibitions_on_assigned_to", using: :btree
@@ -322,26 +325,38 @@ ActiveRecord::Schema.define(version: 20160328161328) do
   add_index "groups_users", ["user_id"], name: "index_groups_users_on_user_id", using: :btree
 
   create_table "hotels", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "rating"
+    t.text     "subscribed_users"
   end
 
   add_index "hotels", ["assigned_to"], name: "index_hotels_on_assigned_to", using: :btree
   add_index "hotels", ["user_id", "name", "deleted_at"], name: "index_hotels_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "itineraries", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.integer  "account_id"
+    t.string   "uuid",             limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
+    t.datetime "deleted_at"
+    t.text     "subscribed_users"
   end
+
+  add_index "itineraries", ["assigned_to"], name: "index_itineraries_on_assigned_to", using: :btree
+  add_index "itineraries", ["user_id", "name", "deleted_at"], name: "index_itineraries_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "itinerary_items", force: :cascade do |t|
     t.datetime "order_date"
@@ -418,15 +433,16 @@ ActiveRecord::Schema.define(version: 20160328161328) do
   add_index "opportunities", ["user_id", "name", "deleted_at"], name: "id_name_deleted", unique: true, using: :btree
 
   create_table "parks", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subscribed_users"
   end
 
   add_index "parks", ["assigned_to"], name: "index_parks_on_assigned_to", using: :btree
@@ -456,15 +472,16 @@ ActiveRecord::Schema.define(version: 20160328161328) do
   add_index "preferences", ["user_id", "name"], name: "index_preferences_on_user_id_and_name", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subscribed_users"
   end
 
   add_index "restaurants", ["assigned_to"], name: "index_restaurants_on_assigned_to", using: :btree
@@ -532,15 +549,16 @@ ActiveRecord::Schema.define(version: 20160328161328) do
   add_index "tasks", ["user_id", "name", "deleted_at"], name: "index_tasks_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "transports", force: :cascade do |t|
-    t.string   "uuid",        limit: 36
+    t.string   "uuid",             limit: 36
     t.integer  "user_id"
     t.integer  "assigned_to"
-    t.string   "name",        limit: 64, default: "",       null: false
-    t.string   "access",      limit: 8,  default: "Public"
-    t.string   "status",      limit: 64
+    t.string   "name",             limit: 64, default: "",       null: false
+    t.string   "access",           limit: 8,  default: "Public"
+    t.string   "status",           limit: 64
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subscribed_users"
   end
 
   add_index "transports", ["assigned_to"], name: "index_transports_on_assigned_to", using: :btree

@@ -6,6 +6,8 @@ class Itinerary < ActiveRecord::Base
   has_many :addresses, dependent: :destroy, as: :addressable, class_name: "Address" # advanced search uses this
   has_many :emails, as: :mediator
 
+  serialize :subscribed_users, Set
+
   uses_user_permissions
   acts_as_commentable
   uses_comment_extensions
