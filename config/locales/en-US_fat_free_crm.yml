@@ -340,7 +340,7 @@ en-US:
   # Views -> Itineraries
   itinerary: Itinerary
   itineraries: Itineraries
-  create_exibition: Create Itinerary
+  create_itinerary: Create Itinerary
   my_itineraries: My Itineraries
   no_itinerary_records: You have no my_itineraries.
 
