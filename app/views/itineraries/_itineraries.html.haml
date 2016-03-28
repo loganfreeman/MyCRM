@@ -1,0 +1,7 @@
+
+= section(object, :itineraries)
+.list#itineraries
+  - itineraries = object.itineraries.order('updated_at desc').paginate(:page => 1, :per_page => 20)
+  = render :partial => "itineraries/itinerary", :collection => itineraries
+
+= paginate( collection: itineraries, id: 'itineraries_pagination', params: { action: 'itineraries' } )

@@ -1,0 +1,25 @@
+%li.highlight[itinerary]
+
+  %ul.tools
+    = hook(:itinerary_tools_before, self, :itinerary => itinerary)
+
+    - if can?(:update, itinerary)
+      %li= link_to_edit(itinerary)
+
+    - if shown_on_landing_page?
+      %li= link_to_discard(itinerary)
+
+    - if can?(:destroy, itinerary)
+      %li= link_to_delete(itinerary)
+
+  .indentslim
+    = link_to_if can?(:read, itinerary), itinerary.name, itinerary
+
+    %dt{ :style => "padding: 2px 0px 0px 0px" }
+      = t(:added_ago, value: timeago(itinerary.created_at)).html_safe
+
+    - if itinerary.tag_list.present?
+      %dt
+        .tags= tags_for_index(itinerary)
+
+    = hook(:itinerary_bottom, self, :itinerary => itinerary)
