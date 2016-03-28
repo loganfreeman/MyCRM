@@ -4,6 +4,7 @@
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
 class RestaurantsController < EntitiesController
+  before_action :get_restaurants, only: [:new, :create, :edit, :update]
 
   # GET /Restaurants
   #----------------------------------------------------------------------------

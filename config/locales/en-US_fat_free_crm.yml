@@ -318,6 +318,20 @@ en-US:
   # Views -> Hotels
   hotel: Hotel
   create_hotel: Create Hotel
+  my_hotels: My Hotels
+  no_hotel_records: You have no hotels.
+
+  # Views -> restaurants
+  restaurant: Restaurant
+  create_restaurant: Create Restaurant
+  my_restaurants: My Restaurants
+  no_restaurant_records: You have no restaurants.
+
+  # Views -> restaurants
+  park: Park
+  create_park: Create Park
+  my_parks: My Parks
+  no_park_records: You have no parks.
 
   # Views -> Accounts.
   #----------------------------------------------------------------------------

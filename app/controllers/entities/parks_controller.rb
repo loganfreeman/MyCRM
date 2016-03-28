@@ -4,6 +4,7 @@
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
 class ParksController < EntitiesController
+  before_action :get_parks, only: [:new, :create, :edit, :update]
 
   # GET /Parks
   #----------------------------------------------------------------------------
