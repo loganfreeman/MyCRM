@@ -29,7 +29,15 @@ module UsersHelper
            class: 'select2')
   end
 
+  def category_select(asset, users, myself)
+    select(asset, :category, %w(guide boss operator finance contact manager driver),
+        {include_blank: true},
+        style: 'width:160px',
+        class: 'select2')
+  end
+
   def user_options_for_select(users, myself)
     (users - [myself]).map { |u| [u.full_name, u.id] }.prepend([t(:myself), myself.id])
   end
+
 end

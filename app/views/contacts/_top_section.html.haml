@@ -18,6 +18,10 @@
         %td
           .label #{t :phone}:
           = f.text_field :phone
+      %tr
+        %td
+          .label #{t :category}:
+          = category_select(:contact, all_users, current_user)
 
     %table
       = fields_for(@account) do |a|
