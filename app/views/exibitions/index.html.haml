@@ -1,0 +1,18 @@
+= styles_for :exibition
+
+= render 'entities/title_bar'
+
+.remote#create_exibition{ hidden }
+
+= render 'search'
+
+.remote#options{ hidden }
+
+.list#exibitions
+  - if @exibitions.any?
+    = render @exibitions
+  - else
+    = render "shared/empty"
+
+#paginate= render "shared/paginate_with_per_page"
+#export= render "shared/export"

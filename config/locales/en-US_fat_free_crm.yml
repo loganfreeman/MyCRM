@@ -323,8 +323,30 @@ en-US:
   remember_me: Remember Me
   sign_up_now: Sign Up Now!
 
+  # Views -> Exibitions
+  exibition: Exibition
+  exibitions: Exibitions
+  create_exibition: Create Exibition
+  my_exibitions: My Exibitions
+  no_exibition_records: You have no exibitions.
+
+  # Views -> Conferences
+  conference: Conference
+  conferences: Conferences
+  create_conference: Create Conference
+  my_conferences: My Conferences
+  no_conference_records: You have no conferences.
+
+  # Views -> Itineraries
+  itinerary: Itinerary
+  itineraries: Itineraries
+  create_exibition: Create Itinerary
+  my_itineraries: My Itineraries
+  no_itinerary_records: You have no my_itineraries.
+
   # Views -> Hotels
   hotel: Hotel
+  hotels: Hotels
   create_hotel: Create Hotel
   my_hotels: My Hotels
   no_hotel_records: You have no hotels.
@@ -335,7 +357,7 @@ en-US:
   my_restaurants: My Restaurants
   no_restaurant_records: You have no restaurants.
 
-  # Views -> restaurants
+  # Views -> parks
   park: Park
   create_park: Create Park
   my_parks: My Parks
