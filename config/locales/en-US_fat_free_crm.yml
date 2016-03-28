@@ -94,6 +94,12 @@ en-US:
   completed_last_week: Last week
   completed_this_month: This month
   completed_last_month: Last month
+  guide: guide
+  boss: boss
+  operator: operator
+  manager: manager
+  finance: finance
+  driver: driver
 
   # Models/Activity.
   #----------------------------------------------------------------------------

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328154633) do
+ActiveRecord::Schema.define(version: 20160328161328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -336,6 +336,21 @@ ActiveRecord::Schema.define(version: 20160328154633) do
 
   add_index "hotels", ["assigned_to"], name: "index_hotels_on_assigned_to", using: :btree
   add_index "hotels", ["user_id", "name", "deleted_at"], name: "index_hotels_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
+  create_table "itineraries", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "itinerary_items", force: :cascade do |t|
+    t.datetime "order_date"
+    t.integer  "itinerary_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "itinerary_items", ["itinerary_id"], name: "index_itinerary_items_on_itinerary_id", using: :btree
 
   create_table "leads", force: :cascade do |t|
     t.integer  "user_id"

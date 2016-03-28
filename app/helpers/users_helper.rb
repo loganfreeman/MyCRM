@@ -30,7 +30,7 @@ module UsersHelper
   end
 
   def category_select(asset, users, myself)
-    select(asset, :category, %w(guide boss operator finance contact manager driver),
+    select(asset, :category, Setting.unroll(:contact_category),
         {include_blank: true},
         style: 'width:160px',
         class: 'select2')

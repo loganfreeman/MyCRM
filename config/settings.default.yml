@@ -378,6 +378,14 @@ task_category:
   - :presentation
   - :trip
 
+contact_category:
+  - :guide
+  - :boss
+  - :operator
+  - :finance
+  - :manager
+  - :driver
+
 task_category_color:
   :call         : Silver
   :email        : Turquoise
