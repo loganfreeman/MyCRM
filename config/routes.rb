@@ -56,6 +56,25 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :itineraries, id: /\d+/ do
+    collection do
+      get :advanced_search
+      post :filter
+      get :options
+      get :field_group
+      match :auto_complete, via: [:get, :post]
+      get :redraw
+      get :versions
+    end
+    member do
+      put :attach
+      post :discard
+      post :subscribe
+      post :unsubscribe
+      get :opportunities
+    end
+  end
+
   resources :conferences, id: /\d+/ do
   end
 

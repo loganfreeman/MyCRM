@@ -59,6 +59,7 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails' unless ENV["CI"]
   gem 'factory_girl_rails'
+  gem 'rails-erd'
 end
 
 group :test do

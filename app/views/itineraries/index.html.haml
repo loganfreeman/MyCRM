@@ -1,16 +1,16 @@
-= styles_for :conference
+= styles_for :itinerary
 
 = render 'entities/title_bar'
 
-.remote#create_conference{ hidden }
+.remote#create_itinerary{ hidden }
 
 = render 'search'
 
 .remote#options{ hidden }
 
-.list#conferences
-  - if @conferences.any?
-    = render @conferences
+.list#itineraries
+  - if @itineraries.any?
+    = render @itineraries
   - else
     = render "shared/empty"
 

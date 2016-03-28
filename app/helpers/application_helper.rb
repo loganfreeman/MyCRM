@@ -7,15 +7,26 @@ module ApplicationHelper
   def tabs(tabs = nil)
     tabs ||= controller_path =~ /admin/ ? FatFreeCRM::Tabs.admin : FatFreeCRM::Tabs.main
     if tabs
-      @current_tab ||= session[:current_tab]
-      @current_tab ||= tabs.first[:text] # Select first tab by default.
-      tabs.each { |tab|
-        tab[:active] = (@current_tab == tab[:text] || @current_tab == tab[:url][:controller])
-        if tab[:active]
-          session[:current_tab] = tab[:text]
-          logger.debug "saved current tab to session: #{tab[:text]}"
-        end
-      }
+      current_tab_set = false
+      if @current_tab.present?
+        tabs.each { |tab|
+          tab[:active] = (@current_tab == tab[:text] || @current_tab == tab[:url][:controller])
+          if tab[:active]
+            session[:current_tab] = tab[:text]
+            current_tab_set = true
+            logger.debug "saved current tab to session: #{tab[:text]}"
+          end
+        }
+      end
+      if !current_tab_set
+        @current_tab = (session[:current_tab] || tabs.first[:text])
+        logger.debug "current tab not set #{@current_tab}"
+
+        tabs.each { |tab|
+          tab[:active] = (@current_tab == tab[:text] || @current_tab == tab[:url][:controller])
+        }
+      end
+      tabs
     else
       fail FatFreeCRM::MissingSettings, "Tab settings are missing, please run <b>rake ffcrm:setup</b> command."
     end

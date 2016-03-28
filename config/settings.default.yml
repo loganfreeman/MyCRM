@@ -203,6 +203,11 @@
   :url:
     :controller: home
 - :active: false
+  :text: :tab_itineraries
+  :icon: :fa-dashboard
+  :url:
+    :controller: itineraries
+- :active: false
   :text: :tab_resources
   :icon: :fa-check-square-o
   :url:

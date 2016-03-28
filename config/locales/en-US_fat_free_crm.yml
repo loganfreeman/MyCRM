@@ -25,6 +25,7 @@ en-US:
   #----------------------------------------------------------------------------
   tab_dashboard: Dashboard
   tab_resources: Resources
+  tab_itineraries: Itineraries
   tab_tasks: Tasks
   tab_campaigns: Campaigns
   tab_leads: Leads
