@@ -7,9 +7,10 @@ module ApplicationHelper
   def tabs(tabs = nil)
     tabs ||= controller_path =~ /admin/ ? FatFreeCRM::Tabs.admin : FatFreeCRM::Tabs.main
     if tabs
+      @current_tab ||= session[:current_tab]
       @current_tab ||= tabs.first[:text] # Select first tab by default.
       tabs.each { |tab|
-        tab[:active] = (@current_tab == tab[:text] || @current_tab == tab[:url][:controller] || session[:current_tab] == tab[:text])
+        tab[:active] = (@current_tab == tab[:text] || @current_tab == tab[:url][:controller])
         if tab[:active]
           session[:current_tab] = tab[:text]
           logger.debug "saved current tab to session: #{tab[:text]}"
