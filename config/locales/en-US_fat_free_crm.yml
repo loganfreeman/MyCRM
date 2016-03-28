@@ -339,6 +339,7 @@ en-US:
 
   # Views -> Itineraries
   itinerary: Itinerary
+  itinerary_name: Itinerary Name
   itineraries: Itineraries
   create_itinerary: Create Itinerary
   my_itineraries: My Itineraries
