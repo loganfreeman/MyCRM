@@ -8,8 +8,6 @@
 
 .remote#options{ hidden }
 
-= simple_table_for @accounts, with: AccountTable
-
 .list#accounts
   - if @accounts.any?
     = render @accounts

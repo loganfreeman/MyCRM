@@ -14,11 +14,17 @@ en-US:
   select_none: -- None --
   select_blank: -- Select --
   yes_button: 'Yes'
+  overview: Overview
+  client: Clients
+  supplier: Suppliers
+  conference: Conferences
+  exibition: Exibitions
 
 
   # Settings.
   #----------------------------------------------------------------------------
   tab_dashboard: Dashboard
+  tab_resources: Resources
   tab_tasks: Tasks
   tab_campaigns: Campaigns
   tab_leads: Leads
@@ -52,7 +58,7 @@ en-US:
   converted: Converted
   rejected: Rejected
   cold_call: Cold Call
-  conference: Conference
+  conference: Conferences
   online: Online Marketing
   referral: Referral
   self: Self Generated
@@ -308,6 +314,24 @@ en-US:
   no_account: Do not have an account?
   remember_me: Remember Me
   sign_up_now: Sign Up Now!
+
+  # Views -> Hotels
+  hotel: Hotel
+  create_hotel: Create Hotel
+  my_hotels: My Hotels
+  no_hotel_records: You have no hotels.
+
+  # Views -> restaurants
+  restaurant: Restaurant
+  create_restaurant: Create Restaurant
+  my_restaurants: My Restaurants
+  no_restaurant_records: You have no restaurants.
+
+  # Views -> restaurants
+  park: Park
+  create_park: Create Park
+  my_parks: My Parks
+  no_park_records: You have no parks.
 
   # Views -> Accounts.
   #----------------------------------------------------------------------------
@@ -586,10 +610,15 @@ en-US:
   all_events_past_participle: Activities
   action_create_comment: ! '- &quot;%{comment}&quot;'
   my_tasks: My Tasks
+  my_hotels: My Hotels
   no_task_records: You have no tasks.
+  no_hotel_records: You have no hotels.
   my_opportunities: My Opportunities
   no_opportunity_records: You have no opportunities.
   my_accounts: My Accounts
+  my_suppliers: My Suppliers
+  my_conferences: My Conferences
+  my_exibitions: My Exibitions
   no_account_records: You have no accounts
   not_showing_hidden_entities: Not showing %{count} hidden %{entity}.
 

@@ -1,6 +1,6 @@
 class AccountTable < TableCloth::Base
   # Define columns with the #column method
-  column :name, :email
+  column :name, :email, :website, :phone, :fax
 
   Account.fields.each do |field|
     column field.label do |object|

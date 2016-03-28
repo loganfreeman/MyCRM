@@ -1,0 +1,26 @@
+.title
+  = link_to(t(:my_hotels), url_for(controller: :hotels))
+%ul.list#hotels
+  - unless @my_hotels.empty?
+    = render :partial => "home/hotel", :collection => @my_hotels.limit(10)
+    = show_hidden_entities_message(@my_hotels.count, 'hotel', 10)
+  - else
+    #{t :no_hotel_records}
+
+.title
+  = link_to(t(:my_parks), url_for(controller: :parks))
+%ul.list#hotels
+  - unless @my_parks.empty?
+    = render :partial => "home/park", :collection => @my_parks.limit(10)
+    = show_hidden_entities_message(@my_parks.count, 'park', 10)
+  - else
+    #{t :no_park_records}
+
+.title
+  = link_to(t(:my_restaurants), url_for(controller: :restaurants))
+%ul.list#hotels
+  - unless @my_restaurants.empty?
+    = render :partial => "home/restaurant", :collection => @my_restaurants.limit(10)
+    = show_hidden_entities_message(@my_restaurants.count, 'restaurant', 10)
+  - else
+    #{t :no_restaurant_records}

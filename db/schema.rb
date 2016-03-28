@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321201007) do
+ActiveRecord::Schema.define(version: 20160328001123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -137,6 +137,23 @@ ActiveRecord::Schema.define(version: 20160321201007) do
     t.string   "state",            limit: 16, default: "Expanded", null: false
   end
 
+  create_table "conferences", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.date     "starts_on"
+    t.date     "ends_on"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "conferences", ["assigned_to"], name: "index_conferences_on_assigned_to", using: :btree
+  add_index "conferences", ["user_id", "name", "deleted_at"], name: "index_conferences_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
   create_table "contact_opportunities", force: :cascade do |t|
     t.integer  "contact_id"
     t.integer  "opportunity_id"
@@ -182,13 +199,15 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   add_index "contacts", ["user_id", "last_name", "deleted_at"], name: "id_last_name_deleted", unique: true, using: :btree
 
   create_table "customers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "company"
-    t.text   "address"
-    t.string "phone"
-    t.string "email"
-    t.string "website"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company"
+    t.text     "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "emails", force: :cascade do |t|
@@ -212,6 +231,46 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   end
 
   add_index "emails", ["mediator_id", "mediator_type"], name: "index_emails_on_mediator_id_and_mediator_type", using: :btree
+
+  create_table "emp_data", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "entertainments", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "entertainments", ["assigned_to"], name: "index_entertainments_on_assigned_to", using: :btree
+  add_index "entertainments", ["user_id", "name", "deleted_at"], name: "index_entertainments_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
+  create_table "exibitions", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.date     "starts_on"
+    t.date     "ends_on"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "exibitions", ["assigned_to"], name: "index_exibitions_on_assigned_to", using: :btree
+  add_index "exibitions", ["user_id", "name", "deleted_at"], name: "index_exibitions_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "field_groups", force: :cascade do |t|
     t.string   "name",       limit: 64
@@ -260,6 +319,22 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   add_index "groups_users", ["group_id", "user_id"], name: "index_groups_users_on_group_id_and_user_id", using: :btree
   add_index "groups_users", ["group_id"], name: "index_groups_users_on_group_id", using: :btree
   add_index "groups_users", ["user_id"], name: "index_groups_users_on_user_id", using: :btree
+
+  create_table "hotels", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "rating"
+  end
+
+  add_index "hotels", ["assigned_to"], name: "index_hotels_on_assigned_to", using: :btree
+  add_index "hotels", ["user_id", "name", "deleted_at"], name: "index_hotels_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "leads", force: :cascade do |t|
     t.integer  "user_id"
@@ -326,6 +401,21 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   add_index "opportunities", ["assigned_to"], name: "index_opportunities_on_assigned_to", using: :btree
   add_index "opportunities", ["user_id", "name", "deleted_at"], name: "id_name_deleted", unique: true, using: :btree
 
+  create_table "parks", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "parks", ["assigned_to"], name: "index_parks_on_assigned_to", using: :btree
+  add_index "parks", ["user_id", "name", "deleted_at"], name: "index_parks_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
   create_table "permissions", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "asset_id"
@@ -348,6 +438,21 @@ ActiveRecord::Schema.define(version: 20160321201007) do
   end
 
   add_index "preferences", ["user_id", "name"], name: "index_preferences_on_user_id_and_name", using: :btree
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "restaurants", ["assigned_to"], name: "index_restaurants_on_assigned_to", using: :btree
+  add_index "restaurants", ["user_id", "name", "deleted_at"], name: "index_restaurants_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
@@ -409,6 +514,21 @@ ActiveRecord::Schema.define(version: 20160321201007) do
 
   add_index "tasks", ["assigned_to"], name: "index_tasks_on_assigned_to", using: :btree
   add_index "tasks", ["user_id", "name", "deleted_at"], name: "index_tasks_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
+  create_table "transports", force: :cascade do |t|
+    t.string   "uuid",        limit: 36
+    t.integer  "user_id"
+    t.integer  "assigned_to"
+    t.string   "name",        limit: 64, default: "",       null: false
+    t.string   "access",      limit: 8,  default: "Public"
+    t.string   "status",      limit: 64
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "transports", ["assigned_to"], name: "index_transports_on_assigned_to", using: :btree
+  add_index "transports", ["user_id", "name", "deleted_at"], name: "index_transports_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",            limit: 32,  default: "",    null: false
