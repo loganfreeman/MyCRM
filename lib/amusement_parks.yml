@@ -1,0 +1,1881 @@
+---
+- :id: 2
+  :name: Calaway Park
+  :city: Calgary
+  :state: Alberta
+  :country: Canada
+- :id: 3
+  :name: Galaxyland
+  :city: Edmonton
+  :state: Alberta
+  :country: Canada
+- :id: 4
+  :name: Heratage Park
+  :city: Calgary
+  :state: Alberta
+  :country: Canada
+- :id: 6
+  :name: Playland (Vancouver)
+  :city: Vancouver
+  :state: British Columbia
+  :country: Canada
+- :id: 8
+  :name: Crystal Palace Amusement Park
+  :city: Dieppe
+  :state: New Brunswick
+  :country: Canada
+- :id: 9
+  :name: Magic Mountain Water Park
+  :city: Moncton
+  :state: New Brunswick
+  :country: Canada
+- :id: 13
+  :name: Upper Clements Park
+  :city: Clementsport
+  :state: Nova Scotia
+  :country: Canada
+- :id: 15
+  :name: African Lion Safari
+  :city: Hamilton
+  :state: Ontario
+  :country: Canada
+- :id: 16
+  :name: Calypso Park
+  :city: Limoges
+  :state: Ontario
+  :country: Canada
+- :id: 17
+  :name: Canada's Wonderland
+  :city: Vaughan
+  :state: Ontario
+  :country: Canada
+- :id: 18
+  :name: Centreville Amusement Park
+  :city: Toronto Islands
+  :state: Ontario
+  :country: Canada
+- :id: 19
+  :name: Crystal Beach, Ontario
+  :city: Fort Erie
+  :state: Ontario
+  :country: Canada
+- :id: 20
+  :name: Exhibition Place
+  :city: Toronto
+  :state: Ontario
+  :country: Canada
+- :id: 21
+  :name: Legoland
+  :city: Vaughan
+  :state: Ontario
+  :country: Canada
+- :id: 22
+  :name: Logos Land
+  :city: Cobden
+  :state: Ontario
+  :country: Canada
+- :id: 23
+  :name: MarineLand
+  :city: Niagara Falls
+  :state: Ontario
+  :country: Canada
+- :id: 24
+  :name: Ontario Place (theme park)
+  :city: Toronto
+  :state: Ontario
+  :country: Canada
+- :id: 25
+  :name: Playdium
+  :city: Mississauga
+  :state: Ontario
+  :country: Canada
+- :id: 26
+  :name: Santa's Village (Ontario)
+  :city: Bracebridge
+  :state: Ontario
+  :country: Canada
+- :id: 27
+  :name: Storybook Gardens
+  :city: London
+  :state: Ontario
+  :country: Canada
+- :id: 28
+  :name: Storyland (Ontario)
+  :city: Renfrew
+  :state: Ontario
+  :country: Canada
+- :id: 29
+  :name: Sunnyside Amusement Park
+  :city: Toronto
+  :state: Ontario
+  :country: Canada
+- :id: 30
+  :name: Wild Water Kingdom
+  :city: Brampton
+  :state: Ontario
+  :country: Canada
+- :id: 33
+  :name: Mega Parc
+  :city: Quebec City
+  :state: Quebec
+  :country: Canada
+- :id: 34
+  :name: Mont Saint-Sauveur
+  :city: Saint-Sauveur
+  :state: Quebec
+  :country: Canada
+- :id: 35
+  :name: Parc Safari
+  :city: Hemmingford
+  :state: Quebec
+  :country: Canada
+- :id: 36
+  :name: Ski Bromont
+  :city: Bromont
+  :state: Quebec
+  :country: Canada
+- :id: 37
+  :name: Super Aqua Club
+  :city: Pointe-Calumet
+  :state: Quebec
+  :country: Canada
+- :id: 38
+  :name: Village Vacances Valcartier
+  :city: Valcartier
+  :state: Quebec
+  :country: Canada
+- :id: 39
+  :name: Zoo de Granby
+  :city: Granby
+  :state: Quebec
+  :country: Canada
+- :id: 51
+  :name: Magic Mountain, Merimbula
+  :city: Merimbula
+  :state: New South Wales
+  :country: Australia
+- :id: 53
+  :name: Jamberoo Action Park
+  :city: Jamberoo
+  :state: New South Wales
+  :country: Australia
+- :id: 62
+  :name: Wonderland City
+  :city: Bondi Aquarium
+  :state: New South Wales
+  :country: Australia
+- :id: 64
+  :name: Wet'n'Wild Sydney
+  :city: Prospect
+  :state: New South Wales
+  :country: Australia
+- :id: 65
+  :name: Sydney Royal Easter Show
+  :city: Homebush
+  :state: New South Wales
+  :country: Australia
+- :id: 82
+  :name: Hi-Lite Park
+  :city: Geelong
+  :state: Victoria (Australia)
+  :country: Australia
+- :id: 83
+  :name: Gumbuya Park
+  :city: Tynong
+  :state: Victoria (Australia)
+  :country: Australia
+- :id: 84
+  :name: Luna Park, Melbourne
+  :city: Melbourne
+  :state: Victoria (Australia)
+  :country: Australia
+- :id: 86
+  :name: Adventure World (amusement park)
+  :city: Bibra Lake
+  :state: Western Australia
+  :country: Australia
+- :id: 93
+  :name: Calaway Park
+  :city: Calgary
+  :state: Alberta
+  :country: Canada
+- :id: 94
+  :name: Galaxyland
+  :city: Edmonton
+  :state: Alberta
+  :country: Canada
+- :id: 95
+  :name: Heratage Park
+  :city: Calgary
+  :state: Alberta
+  :country: Canada
+- :id: 97
+  :name: Playland (Vancouver)
+  :city: Vancouver
+  :state: British Columbia
+  :country: Canada
+- :id: 99
+  :name: Crystal Palace Amusement Park
+  :city: Dieppe
+  :state: New Brunswick
+  :country: Canada
+- :id: 100
+  :name: Magic Mountain Water Park
+  :city: Moncton
+  :state: New Brunswick
+  :country: Canada
+- :id: 104
+  :name: Upper Clements Park
+  :city: Clementsport
+  :state: Nova Scotia
+  :country: Canada
+- :id: 106
+  :name: African Lion Safari
+  :city: Hamilton
+  :state: Ontario
+  :country: Canada
+- :id: 107
+  :name: Calypso Park
+  :city: Limoges
+  :state: Ontario
+  :country: Canada
+- :id: 108
+  :name: Canada's Wonderland
+  :city: Vaughan
+  :state: Ontario
+  :country: Canada
+- :id: 109
+  :name: Centreville Amusement Park
+  :city: Toronto Islands
+  :state: Ontario
+  :country: Canada
+- :id: 110
+  :name: Crystal Beach, Ontario
+  :city: Fort Erie
+  :state: Ontario
+  :country: Canada
+- :id: 111
+  :name: Exhibition Place
+  :city: Toronto
+  :state: Ontario
+  :country: Canada
+- :id: 112
+  :name: Legoland
+  :city: Vaughan
+  :state: Ontario
+  :country: Canada
+- :id: 113
+  :name: Logos Land
+  :city: Cobden
+  :state: Ontario
+  :country: Canada
+- :id: 114
+  :name: MarineLand
+  :city: Niagara Falls
+  :state: Ontario
+  :country: Canada
+- :id: 115
+  :name: Ontario Place (theme park)
+  :city: Toronto
+  :state: Ontario
+  :country: Canada
+- :id: 116
+  :name: Playdium
+  :city: Mississauga
+  :state: Ontario
+  :country: Canada
+- :id: 117
+  :name: Santa's Village (Ontario)
+  :city: Bracebridge
+  :state: Ontario
+  :country: Canada
+- :id: 118
+  :name: Storybook Gardens
+  :city: London
+  :state: Ontario
+  :country: Canada
+- :id: 119
+  :name: Storyland (Ontario)
+  :city: Renfrew
+  :state: Ontario
+  :country: Canada
+- :id: 120
+  :name: Sunnyside Amusement Park
+  :city: Toronto
+  :state: Ontario
+  :country: Canada
+- :id: 121
+  :name: Wild Water Kingdom
+  :city: Brampton
+  :state: Ontario
+  :country: Canada
+- :id: 124
+  :name: Mega Parc
+  :city: Quebec City
+  :state: Quebec
+  :country: Canada
+- :id: 125
+  :name: Mont Saint-Sauveur
+  :city: Saint-Sauveur
+  :state: Quebec
+  :country: Canada
+- :id: 126
+  :name: Parc Safari
+  :city: Hemmingford
+  :state: Quebec
+  :country: Canada
+- :id: 127
+  :name: Ski Bromont
+  :city: Bromont
+  :state: Quebec
+  :country: Canada
+- :id: 128
+  :name: Super Aqua Club
+  :city: Pointe-Calumet
+  :state: Quebec
+  :country: Canada
+- :id: 129
+  :name: Village Vacances Valcartier
+  :city: Valcartier
+  :state: Quebec
+  :country: Canada
+- :id: 130
+  :name: Zoo de Granby
+  :city: Granby
+  :state: Quebec
+  :country: Canada
+- :id: 132
+  :name: Anancy Fun Park
+  :city: Negril
+  :state: Quebec
+  :country: Jamaica
+- :id: 133
+  :name: Aquasol Theme Park
+  :city: Montego Bay
+  :state: Quebec
+  :country: Jamaica
+- :id: 134
+  :name: Hope Fun Park
+  :city: Kingston
+  :state: Quebec
+  :country: Jamaica
+- :id: 135
+  :name: Kool Runnings Water Park
+  :city: Negril
+  :state: Quebec
+  :country: Jamaica
+- :id: 136
+  :name: Mystic Mountain (Amusement Park)
+  :city: Ocho Rios
+  :state: Quebec
+  :country: Jamaica
+- :id: 139
+  :name: La Estacion Theme Park
+  :city: Aguascalientes
+  :state: Aguascalientes
+  :country: Mexico
+- :id: 152
+  :name: Cancún
+  :city: Isla Mujeres
+  :state: Quintana Roo
+  :country: Mexico
+- :id: 172
+  :name: Southern Adventures
+  :city: Huntsville
+  :state: Alabama
+  :country: United States
+- :id: 173
+  :name: Waterville USA
+  :city: Gulf Shores
+  :state: Alabama
+  :country: United States
+- :id: 175
+  :name: H20asis
+  :city: Anchorage
+  :state: Alaska
+  :country: United States
+- :id: 177
+  :name: Big Surf
+  :city: Tempe
+  :state: Arizona
+  :country: United States
+- :id: 178
+  :name: Castles N' Coasters
+  :city: Phoenix
+  :state: Arizona
+  :country: United States
+- :id: 179
+  :name: Enchanted Island (amusement park)
+  :city: Phoenix
+  :state: Arizona
+  :country: United States
+- :id: 180
+  :name: Fiddlesticks Family Fun Park
+  :city: Tempe
+  :state: Arizona
+  :country: United States
+- :id: 182
+  :name: Golf n' Stuff
+  :city: Tucson
+  :state: Arizona
+  :country: United States
+- :id: 183
+  :name: Golfland Sunsplash
+  :city: Mesa
+  :state: Arizona
+  :country: United States
+- :id: 184
+  :name: Schnepf Farms
+  :city: Queen Creek
+  :state: Arizona
+  :country: United States
+- :id: 186
+  :name: Arkadelphia Aquatic Park
+  :city: Arkadelphia
+  :state: Arkansas
+  :country: United States
+- :id: 187
+  :name: Funland Amusement Park
+  :city: North Little Rock
+  :state: Arkansas
+  :country: United States
+- :id: 188
+  :name: Magic Springs and Crystal Falls
+  :city: Hot Springs
+  :state: Arkansas
+  :country: United States
+- :id: 189
+  :name: Wild River Country
+  :city: North Little Rock
+  :state: Arkansas
+  :country: United States
+- :id: 190
+  :name: Willow Springs Water Park
+  :city: Little Rock
+  :state: Arkansas
+  :country: United States
+- :id: 193
+  :name: Funderland
+  :city: Sacramento
+  :state: California
+  :country: United States
+- :id: 194
+  :name: Gilroy Gardens
+  :city: Gilroy
+  :state: California
+  :country: United States
+- :id: 195
+  :name: Raging Waters
+  :city: Sacramento
+  :state: California
+  :country: United States
+- :id: 196
+  :name: Santa Cruz Beach Boardwalk
+  :city: Santa Cruz
+  :state: California
+  :country: United States
+- :id: 197
+  :name: Sunsplash
+  :city: Roseville
+  :state: California
+  :country: United States
+- :id: 200
+  :name: Aqua Adventure
+  :city: Fremont
+  :state: California
+  :country: United States
+- :id: 201
+  :name: California's Great America
+  :city: Santa Clara
+  :state: California
+  :country: United States
+- :id: 202
+  :name: Children's Fairyland
+  :city: Oakland
+  :state: California
+  :country: United States
+- :id: 203
+  :name: Raging Waters
+  :city: San Jose
+  :state: California
+  :country: United States
+- :id: 204
+  :name: Six Flags Discovery Kingdom
+  :city: Vallejo
+  :state: California
+  :country: United States
+- :id: 205
+  :name: Splash Pad Park
+  :city: Oakland
+  :state: California
+  :country: United States
+- :id: 206
+  :name: Waterworld California
+  :city: Concord
+  :state: California
+  :country: United States
+- :id: 209
+  :name: Dry Town Water Park
+  :city: Palmdale
+  :state: California
+  :country: United States
+- :id: 210
+  :name: Pacific Park
+  :city: Santa Monica
+  :state: California
+  :country: United States
+- :id: 211
+  :name: Raging Waters
+  :city: San Dimas
+  :state: California
+  :country: United States
+- :id: 212
+  :name: Six Flags Hurricane Harbor
+  :city: Valencia
+  :state: California
+  :country: United States
+- :id: 213
+  :name: Six Flags Magic Mountain
+  :city: Valencia
+  :state: California
+  :country: United States
+- :id: 214
+  :name: Universal Studios Hollywood
+  :city: Universal City
+  :state: California
+  :country: United States
+- :id: 217
+  :name: Adventure City
+  :city: Anaheim
+  :state: California
+  :country: United States
+- :id: 218
+  :name: Disney California Adventure Park
+  :city: Anaheim
+  :state: California
+  :country: United States
+- :id: 219
+  :name: Disneyland
+  :city: Anaheim
+  :state: California
+  :country: United States
+- :id: 220
+  :name: Knott's Berry Farm
+  :city: Buena Park
+  :state: California
+  :country: United States
+- :id: 221
+  :name: Knott's Soak City
+  :city: Buena Park
+  :state: California
+  :country: United States
+- :id: 224
+  :name: Castle Park (Amusement Park)
+  :city: Riverside
+  :state: California
+  :country: United States
+- :id: 225
+  :name: Scandia Amusements
+  :city: Ontario
+  :state: California
+  :country: United States
+- :id: 226
+  :name: Wet'n'Wild Palm Springs
+  :city: Palm Springs
+  :state: California
+  :country: United States
+- :id: 229
+  :name: Fiesta Village Family Fun Park
+  :city: Colton
+  :state: California
+  :country: United States
+- :id: 230
+  :name: Scandia Amusements
+  :city: Victorville
+  :state: California
+  :country: United States
+- :id: 233
+  :name: Aquatica San Diego
+  :city: Chula Vista
+  :state: California
+  :country: United States
+- :id: 234
+  :name: Belmont Park (San Diego)
+  :city: San Diego
+  :state: California
+  :country: United States
+- :id: 235
+  :name: Legoland California
+  :city: Carlsbad
+  :state: California
+  :country: United States
+- :id: 238
+  :name: Elitch Gardens
+  :city: Denver
+  :state: Colorado
+  :country: United States
+- :id: 239
+  :name: Lakeside Amusement Park
+  :city: Lakeside
+  :state: Colorado
+  :country: United States
+- :id: 240
+  :name: Santa's Workshop (Colorado)
+  :city: Cascade
+  :state: Colorado
+  :country: United States
+- :id: 241
+  :name: Water World, Colorado
+  :city: Denver
+  :state: Colorado
+  :country: United States
+- :id: 243
+  :name: CoCo Key Water Resort
+  :city: Waterbury
+  :state: Connecticut
+  :country: United States
+- :id: 244
+  :name: Lake Compounce
+  :city: Bristol
+  :state: Connecticut
+  :country: United States
+- :id: 245
+  :name: Ocean Beach Park (Connecticut)
+  :city: New London
+  :state: Connecticut
+  :country: United States
+- :id: 246
+  :name: Quassy Amusement Park
+  :city: Middlebury
+  :state: Connecticut
+  :country: United States
+- :id: 248
+  :name: Blue Diamond Park
+  :city: New Castle
+  :state: Delaware
+  :country: United States
+- :id: 249
+  :name: Funland (Rehoboth Beach, Delaware)
+  :city: Rehoboth Beach
+  :state: Delaware
+  :country: United States
+- :id: 250
+  :name: Jungle Jim's Adventure World
+  :city: Rehoboth Beach
+  :state: Delaware
+  :country: United States
+- :id: 251
+  :name: Killens Pond Water Park
+  :city: Felton
+  :state: Delaware
+  :country: United States
+- :id: 253
+  :name: Adventure Island (water park)
+  :city: Tampa
+  :state: Florida
+  :country: United States
+- :id: 254
+  :name: Adventure Landing
+  :city: Jacksonville Beach
+  :state: Florida
+  :country: United States
+- :id: 255
+  :name: Aquatica Florida
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 256
+  :name: Big Kahuna's
+  :city: Destin
+  :state: Florida
+  :country: United States
+- :id: 257
+  :name: Blizzard Beach
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 258
+  :name: Boomers! Parks
+  :city: Boca Raton
+  :state: Florida
+  :country: United States
+- :id: 259
+  :name: Boomers! Parks
+  :city: Dania Beach
+  :state: Florida
+  :country: United States
+- :id: 260
+  :name: Busch Gardens Tampa
+  :city: Tampa
+  :state: Florida
+  :country: United States
+- :id: 261
+  :name: Celebration Station
+  :city: Clearwater
+  :state: Florida
+  :country: United States
+- :id: 262
+  :name: CoCo Key Water Resort
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 263
+  :name: Daytona Lagoon
+  :city: Daytona Beach
+  :state: Florida
+  :country: United States
+- :id: 264
+  :name: Discovery Cove
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 265
+  :name: Disney's Animal Kingdom
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 266
+  :name: Disney's Hollywood Studios
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 267
+  :name: DisneyQuest
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 268
+  :name: Epcot
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 269
+  :name: Fast Eddies Fun Center
+  :city: Pensacola
+  :state: Florida
+  :country: United States
+- :id: 270
+  :name: Fun Spot (Orlando, Florida)
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 271
+  :name: Fun Spot USA
+  :city: Kissimmee
+  :state: Florida
+  :country: United States
+- :id: 272
+  :name: Gatorland
+  :city: Kissimmee
+  :state: Florida
+  :country: United States
+- :id: 273
+  :name: Holy Land Experience
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 274
+  :name: Kidstar Park
+  :city: Port Charlotte
+  :state: Florida
+  :country: United States
+- :id: 275
+  :name: King Richard's Family Fun Park
+  :city: Naples
+  :state: Florida
+  :country: United States
+- :id: 276
+  :name: Legoland Florida
+  :city: Winter Haven
+  :state: Florida
+  :country: United States
+- :id: 277
+  :name: Lion Country Safari
+  :city: Loxahatchee
+  :state: Florida
+  :country: United States
+- :id: 278
+  :name: Magic Kingdom
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 279
+  :name: Magical Midway
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 280
+  :name: Miami Seaquarium
+  :city: Key Biscayne
+  :state: Florida
+  :country: United States
+- :id: 281
+  :name: Old Town (amusement park)
+  :city: Kissimmee
+  :state: Florida
+  :country: United States
+- :id: 282
+  :name: Rapids Water Park
+  :city: West Palm Beach
+  :state: Florida
+  :country: United States
+- :id: 283
+  :name: Sams Fun City/Surf City
+  :city: Pensacola
+  :state: Florida
+  :country: United States
+- :id: 284
+  :name: Santa's Enchanted Forest
+  :city: Miami
+  :state: Florida
+  :country: United States
+- :id: 286
+  :name: Shipwreck Island (amusement park)
+  :city: Panama City Beach
+  :state: Florida
+  :country: United States
+- :id: 287
+  :name: Silver Springs (attraction)
+  :city: Ocala
+  :state: Florida
+  :country: United States
+- :id: 288
+  :name: Typhoon Lagoon
+  :city: Lake Buena Vista
+  :state: Florida
+  :country: United States
+- :id: 289
+  :name: Uncle Bernies
+  :city: Fort Lauderdale
+  :state: Florida
+  :country: United States
+- :id: 290
+  :name: Universal Studios Florida
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 291
+  :name: Islands of Adventure
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 292
+  :name: Weeki Wachee Springs
+  :city: Spring Hill
+  :state: Florida
+  :country: United States
+- :id: 293
+  :name: Wet 'n Wild Orlando
+  :city: Orlando
+  :state: Florida
+  :country: United States
+- :id: 294
+  :name: Wild Waters
+  :city: Ocala
+  :state: Florida
+  :country: United States
+- :id: 296
+  :name: Adventure Crossing
+  :city: Augusta
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 297
+  :name: All American Fun Park
+  :city: Albany
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 298
+  :name: Alpine Park
+  :city: Helen
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 299
+  :name: Dixieland Fun Park
+  :city: Fayetteville
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 300
+  :name: Lake Winnepesaukah
+  :city: Rossville
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 301
+  :name: Six Flags Over Georgia
+  :city: Austell
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 302
+  :name: Six Flags White Water
+  :city: Marietta
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 303
+  :name: Splash In the Boro
+  :city: Statesboro
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 304
+  :name: Wild Adventures
+  :city: Valdosta
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 305
+  :name: Zoo Atlanta
+  :city: Atlanta
+  :state: Georgia (U.S. state)
+  :country: United States
+- :id: 307
+  :name: Sea Life Park Hawaii
+  :city: Oahu
+  :state: Hawaii
+  :country: United States
+- :id: 309
+  :name: Roaring Springs Water Park
+  :city: Meridian
+  :state: Idaho
+  :country: United States
+- :id: 310
+  :name: Silverwood Theme Park
+  :city: Athol
+  :state: Idaho
+  :country: United States
+- :id: 312
+  :name: Knight's Action Park
+  :city: Springfield
+  :state: Illinois
+  :country: United States
+- :id: 313
+  :name: Magic Waters
+  :city: Rockford
+  :state: Illinois
+  :country: United States
+- :id: 314
+  :name: Pirates Cove (Elk Grove, Illinois)
+  :city: Elk Grove Village
+  :state: Illinois
+  :country: United States
+- :id: 315
+  :name: Raging Rivers WaterPark
+  :city: Grafton
+  :state: Illinois
+  :country: United States
+- :id: 316
+  :name: Six Flags Great America
+  :city: Gurnee
+  :state: Illinois
+  :country: United States
+- :id: 317
+  :name: Six Flags Hurricane Harbor
+  :city: Gurnee
+  :state: Illinois
+  :country: United States
+- :id: 319
+  :name: Fun Spot Amusement Park & Zoo (Indiana)
+  :city: Angola
+  :state: Indiana
+  :country: United States
+- :id: 320
+  :name: Holiday World & Splashin' Safari
+  :city: Santa Claus
+  :state: Indiana
+  :country: United States
+- :id: 321
+  :name: Indiana Beach
+  :city: Monticello
+  :state: Indiana
+  :country: United States
+- :id: 323
+  :name: Adventureland (Iowa)
+  :city: Altoona
+  :state: Iowa
+  :country: United States
+- :id: 324
+  :name: Arnolds Park, Iowa#Arts and culture
+  :city: Arnolds Park
+  :state: Iowa
+  :country: United States
+- :id: 325
+  :name: Lost Island Amusement Park
+  :city: Waterloo
+  :state: Iowa
+  :country: United States
+- :id: 327
+  :name: Schlitterbahn
+  :city: Kansas City
+  :state: Kansas
+  :country: United States
+- :id: 329
+  :name: Beech Bend Park
+  :city: Bowling Green
+  :state: Kentucky
+  :country: United States
+- :id: 330
+  :name: Kentucky Kingdom
+  :city: Louisville
+  :state: Kentucky
+  :country: United States
+- :id: 332
+  :name: Blue Bayou and Dixie Landin'
+  :city: Baton Rouge
+  :state: Louisiana
+  :country: United States
+- :id: 334
+  :name: Aquaboggan
+  :city: Saco
+  :state: Maine
+  :country: United States
+- :id: 335
+  :name: Funtown Splashtown USA
+  :city: Saco
+  :state: Maine
+  :country: United States
+- :id: 336
+  :name: Palace Playland
+  :city: Old Orchard Beach
+  :state: Maine
+  :country: United States
+- :id: 337
+  :name: York's Wild Kingdom
+  :city: York Beach
+  :state: Maine
+  :country: United States
+- :id: 339
+  :name: Baja Amusements
+  :city: Ocean City
+  :state: Maryland
+  :country: United States
+- :id: 340
+  :name: Jolly Roger Amusement Park
+  :city: Ocean City
+  :state: Maryland
+  :country: United States
+- :id: 341
+  :name: Jolly Roger at the Pier
+  :city: Ocean City
+  :state: Maryland
+  :country: United States
+- :id: 342
+  :name: Six Flags America
+  :city: Upper Marlboro
+  :state: Maryland
+  :country: United States
+- :id: 343
+  :name: Trimper's Rides
+  :city: Ocean City
+  :state: Maryland
+  :country: United States
+- :id: 344
+  :name: Adventure Park USA
+  :city: New Market
+  :state: Maryland
+  :country: United States
+- :id: 346
+  :name: CoCo Key Water Resort
+  :city: Danvers
+  :state: Massachusetts
+  :country: United States
+- :id: 347
+  :name: Edaville USA
+  :city: Carver
+  :state: Massachusetts
+  :country: United States
+- :id: 348
+  :name: Great Wolf Lodge
+  :city: Fitchburg
+  :state: Massachusetts
+  :country: United States
+- :id: 349
+  :name: Jiminy Peak Mountain Resort
+  :city: Hancock
+  :state: Massachusetts
+  :country: United States
+- :id: 350
+  :name: Six Flags Hurricane Harbor
+  :city: Agawam
+  :state: Massachusetts
+  :country: United States
+- :id: 351
+  :name: Six Flags New England
+  :city: Agawam
+  :state: Massachusetts
+  :country: United States
+- :id: 352
+  :name: Water Wizz
+  :city: East Wareham
+  :state: Massachusetts
+  :country: United States
+- :id: 354
+  :name: A-Maze-N Mirrors
+  :city: Mackinaw City
+  :state: Michigan
+  :country: United States
+- :id: 355
+  :name: Deer Acres Storybook Amusement Park
+  :city: Pinconning
+  :state: Michigan
+  :country: United States
+- :id: 356
+  :name: Full Blast (Battle Creek, Michigan)
+  :city: Battle Creek
+  :state: Michigan
+  :country: United States
+- :id: 357
+  :name: Michigan's Adventure
+  :city: Muskegon
+  :state: Michigan
+  :country: United States
+- :id: 359
+  :name: Como Town
+  :city: St. Paul
+  :state: Minnesota
+  :country: United States
+- :id: 360
+  :name: Nickelodeon Universe
+  :city: Bloomington
+  :state: Minnesota
+  :country: United States
+- :id: 361
+  :name: Paul Bunyan Land
+  :city: Brainerd
+  :state: Minnesota
+  :country: United States
+- :id: 362
+  :name: Valleyfair
+  :city: Shakopee
+  :state: Minnesota
+  :country: United States
+- :id: 364
+  :name: Dunn's Falls Water Park
+  :city: Enterprise
+  :state: Mississippi
+  :country: United States
+- :id: 365
+  :name: Rapids Water Park (Mississippi)
+  :city: Brandon
+  :state: Mississippi
+  :country: United States
+- :id: 367
+  :name: Branson Tracks
+  :city: Missouri
+  :state: Missouri
+  :country: United States
+- :id: 368
+  :name: Oceans of Fun
+  :city: Kansas City
+  :state: Missouri
+  :country: United States
+- :id: 369
+  :name: Silver Dollar City
+  :city: Branson
+  :state: Missouri
+  :country: United States
+- :id: 370
+  :name: Six Flags Hurricane Harbor
+  :city: Eureka
+  :state: Missouri
+  :country: United States
+- :id: 371
+  :name: Six Flags St. Louis
+  :city: Eureka
+  :state: Missouri
+  :country: United States
+- :id: 372
+  :name: White Water Branson
+  :city: Branson
+  :state: Missouri
+  :country: United States
+- :id: 373
+  :name: Worlds of Fun
+  :city: Kansas City
+  :state: Missouri
+  :country: United States
+- :id: 375
+  :name: Big Sky Water Park
+  :city: Columbia Falls
+  :state: Montana
+  :country: United States
+- :id: 377
+  :name: Fun-Plex
+  :city: Omaha
+  :state: Nebraska
+  :country: United States
+- :id: 379
+  :name: Adventuredome
+  :city: Las Vegas
+  :state: Nevada
+  :country: United States
+- :id: 380
+  :name: Buffalo Bill's
+  :city: Primm
+  :state: Nevada
+  :country: United States
+- :id: 381
+  :name: New York-New York Hotel & Casino
+  :city: Las Vegas
+  :state: Nevada
+  :country: United States
+- :id: 382
+  :name: Stratosphere Las Vegas
+  :city: Las Vegas
+  :state: Nevada
+  :country: United States
+- :id: 384
+  :name: Attitash
+  :city: Bartlett
+  :state: New Hampshire
+  :country: United States
+- :id: 385
+  :name: Canobie Lake Park
+  :city: Salem
+  :state: New Hampshire
+  :country: United States
+- :id: 387
+  :name: Clark's Trading Post
+  :city: Lincoln
+  :state: New Hampshire
+  :country: United States
+- :id: 388
+  :name: Fort Jefferson Fun Park
+  :city: Jefferson
+  :state: New Hampshire
+  :country: United States
+- :id: 389
+  :name: Fun-World
+  :city: Nashua
+  :state: New Hampshire
+  :country: United States
+- :id: 392
+  :name: Santa's Village (Jefferson, New Hampshire)
+  :city: Jefferson
+  :state: New Hampshire
+  :country: United States
+- :id: 393
+  :name: Story Land
+  :city: Glen
+  :state: New Hampshire
+  :country: United States
+- :id: 394
+  :name: Water Country
+  :city: Portsmouth
+  :state: New Hampshire
+  :country: United States
+- :id: 395
+  :name: Whale's Tale Water Park
+  :city: Lincoln
+  :state: New Hampshire
+  :country: United States
+- :id: 397
+  :name: Blackbeard's Cave
+  :city: Bayville
+  :state: New Jersey
+  :country: United States
+- :id: 398
+  :name: Bowcraft Amusement Park
+  :city: Scotch Plains
+  :state: New Jersey
+  :country: United States
+- :id: 399
+  :name: Casino Pier
+  :city: Seaside Heights
+  :state: New Jersey
+  :country: United States
+- :id: 400
+  :name: Clementon Amusement Park
+  :city: Clementon
+  :state: New Jersey
+  :country: United States
+- :id: 404
+  :name: iPlay America
+  :city: Freehold
+  :state: New Jersey
+  :country: United States
+- :id: 407
+  :name: Land of Make Believe (amusement park)
+  :city: Hope
+  :state: New Jersey
+  :country: United States
+- :id: 410
+  :name: Six Flags Great Adventure
+  :city: Jackson
+  :state: New Jersey
+  :country: United States
+- :id: 411
+  :name: Steel Pier
+  :city: Atlantic City
+  :state: New Jersey
+  :country: United States
+- :id: 414
+  :name: Cliff's Amusement Park
+  :city: Albuquerque
+  :state: New Mexico
+  :country: United States
+- :id: 415
+  :name: Western Playland
+  :city: Sunland Park
+  :state: New Mexico
+  :country: United States
+- :id: 417
+  :name: Adventureland (New York)
+  :city: Farmingdale
+  :state: New York
+  :country: United States
+- :id: 418
+  :name: Adventurers Family Entertainment Center
+  :city: Brooklyn
+  :state: New York
+  :country: United States
+- :id: 419
+  :name: Boomer's Family Fun Center
+  :city: Medford
+  :state: New York
+  :country: United States
+- :id: 420
+  :name: Darien Lake
+  :city: Darien
+  :state: New York
+  :country: United States
+- :id: 421
+  :name: Deno's Wonder Wheel Amusement Park
+  :city: Brooklyn
+  :state: New York
+  :country: United States
+- :id: 422
+  :name: Enchanted Forest Water Safari
+  :city: Old Forge
+  :state: New York
+  :country: United States
+- :id: 423
+  :name: Great Escape (amusement park)
+  :city: Lake George
+  :state: New York
+  :country: United States
+- :id: 424
+  :name: Hoffman's Playland
+  :city: Latham
+  :state: New York
+  :country: United States
+- :id: 425
+  :name: Luna Park, Coney Island
+  :city: Brooklyn
+  :state: New York
+  :country: United States
+- :id: 426
+  :name: Magic Forest Park
+  :city: Lake George
+  :state: New York
+  :country: United States
+- :id: 427
+  :name: Martin's Fantasy Island
+  :city: Grand Island
+  :state: New York
+  :country: United States
+- :id: 428
+  :name: Midway State Park
+  :city: Maple Springs
+  :state: New York
+  :country: United States
+- :id: 429
+  :name: Playland (New York)
+  :city: Rye
+  :state: New York
+  :country: United States
+- :id: 430
+  :name: Santa's Workshop (amusement park)
+  :city: Wilmington
+  :state: New York
+  :country: United States
+- :id: 431
+  :name: Seabreeze Amusement Park
+  :city: Rochester
+  :state: New York
+  :country: United States
+- :id: 432
+  :name: Splish Splash
+  :city: Calverton
+  :state: New York
+  :country: United States
+- :id: 433
+  :name: Sylvan Beach Amusement Park
+  :city: Sylvan Beach
+  :state: New York
+  :country: United States
+- :id: 434
+  :name: Victorian Gardens
+  :city: New York City
+  :state: New York
+  :country: United States
+- :id: 436
+  :name: Carowinds
+  :city: Charlotte
+  :state: North Carolina
+  :country: United States
+- :id: 437
+  :name: Ghost Town in the Sky
+  :city: Maggie Valley
+  :state: North Carolina
+  :country: United States
+- :id: 438
+  :name: NASCAR Speedpark
+  :city: Concord
+  :state: North Carolina
+  :country: United States
+- :id: 439
+  :name: Wet 'n Wild Emerald Pointe
+  :city: Greensboro
+  :state: North Carolina
+  :country: United States
+- :id: 441
+  :name: Raging Rivers Waterpark
+  :city: Mandan
+  :state: North Dakota
+  :country: United States
+- :id: 443
+  :name: Cedar Point
+  :city: Sandusky
+  :state: Ohio
+  :country: United States
+- :id: 444
+  :name: Coney Island, Cincinnati, Ohio
+  :city: Cincinnati
+  :state: Ohio
+  :country: United States
+- :id: 445
+  :name: Jungle Jack's Landing
+  :city: Powell
+  :state: Ohio
+  :country: United States
+- :id: 446
+  :name: Kings Island
+  :city: Mason
+  :state: Ohio
+  :country: United States
+- :id: 447
+  :name: Memphis Kiddie Park
+  :city: Brooklyn
+  :state: Ohio
+  :country: United States
+- :id: 448
+  :name: Stricker's Grove
+  :city: Ross
+  :state: Ohio
+  :country: United States
+- :id: 450
+  :name: Big Splash (Tulsa, Oklahoma)
+  :city: Tulsa
+  :state: Oklahoma
+  :country: United States
+- :id: 451
+  :name: Frontier City
+  :city: Oklahoma City
+  :state: Oklahoma
+  :country: United States
+- :id: 452
+  :name: Kiddy Park
+  :city: Bartlesville
+  :state: Oklahoma
+  :country: United States
+- :id: 453
+  :name: White Water Bay
+  :city: Oklahoma City
+  :state: Oklahoma
+  :country: United States
+- :id: 455
+  :name: Enchanted Forest (Oregon)
+  :city: Turner
+  :state: Oregon
+  :country: United States
+- :id: 456
+  :name: Evergreen Wings and Waves Waterpark
+  :city: McMinnville
+  :state: Oregon
+  :country: United States
+- :id: 457
+  :name: Oaks Amusement Park
+  :city: Portland
+  :state: Oregon
+  :country: United States
+- :id: 458
+  :name: Sandland Adventures
+  :city: Florence
+  :state: Oregon
+  :country: United States
+- :id: 459
+  :name: Sun Mountain Fun Center
+  :city: Bend
+  :state: Oregon
+  :country: United States
+- :id: 460
+  :name: Wildlife Safari
+  :city: Winston
+  :state: Oregon
+  :country: United States
+- :id: 462
+  :name: Bushkill Park
+  :city: Easton
+  :state: Pennsylvania
+  :country: United States
+- :id: 463
+  :name: Camelbeach Waterpark
+  :city: Tannersville
+  :state: Pennsylvania
+  :country: United States
+- :id: 464
+  :name: Conneaut Lake Park
+  :city: Conneaut Lake
+  :state: Pennsylvania
+  :country: United States
+- :id: 465
+  :name: DelGrosso's Amusement Park
+  :city: Tipton
+  :state: Pennsylvania
+  :country: United States
+- :id: 467
+  :name: Dutch Wonderland
+  :city: Lancaster
+  :state: Pennsylvania
+  :country: United States
+- :id: 468
+  :name: Fun Fore All
+  :city: Cranberry Township
+  :state: Pennsylvania
+  :country: United States
+- :id: 469
+  :name: Hersheypark
+  :city: Hershey
+  :state: Pennsylvania
+  :country: United States
+- :id: 470
+  :name: Idlewild and Soak Zone
+  :city: Ligonier
+  :state: Pennsylvania
+  :country: United States
+- :id: 471
+  :name: Kennywood
+  :city: West Mifflin
+  :state: Pennsylvania
+  :country: United States
+- :id: 472
+  :name: Knoebels Amusement Resort
+  :city: Elysburg
+  :state: Pennsylvania
+  :country: United States
+- :id: 473
+  :name: Lakemont Park
+  :city: Altoona
+  :state: Pennsylvania
+  :country: United States
+- :id: 474
+  :name: Sesame Place
+  :city: Langhorne
+  :state: Pennsylvania
+  :country: United States
+- :id: 476
+  :name: Waldameer Park
+  :city: Erie
+  :state: Pennsylvania
+  :country: United States
+- :id: 478
+  :name: Atlantic Beach Park
+  :city: Westerly
+  :state: Rhode Island
+  :country: United States
+- :id: 481
+  :name: Family Kingdom Amusement Park
+  :city: Myrtle Beach
+  :state: South Carolina
+  :country: United States
+- :id: 482
+  :name: Carowinds
+  :city: Fort Mill
+  :state: South Carolina
+  :country: United States
+- :id: 484
+  :name: Evan's Plunge
+  :city: Hot Springs
+  :state: South Dakota
+  :country: United States
+- :id: 485
+  :name: Flags & Wheels Indoor Racing
+  :city: Rapid City
+  :state: South Dakota
+  :country: United States
+- :id: 486
+  :name: Storybook Island
+  :city: Rapid City
+  :state: South Dakota
+  :country: United States
+- :id: 487
+  :name: Thunder Road Family Fun Park
+  :city: Aberdeen
+  :state: South Dakota
+  :country: United States
+- :id: 488
+  :name: Wild Water West
+  :city: Sioux Falls
+  :state: South Dakota
+  :country: United States
+- :id: 490
+  :name: Dollywood
+  :city: Pigeon Forge
+  :state: Tennessee
+  :country: United States
+- :id: 491
+  :name: Lake Winnipasokah
+  :city: East Ridge
+  :state: Tennessee
+  :country: United States
+- :id: 492
+  :name: NASCAR Speedpark
+  :city: Sevierville
+  :state: Tennessee
+  :country: United States
+- :id: 493
+  :name: Ober Gatlinburg
+  :city: Gatlinburg
+  :state: Tennessee
+  :country: United States
+- :id: 495
+  :name: Adventure Kingdom (Texas)
+  :city: Lumberton
+  :state: Texas
+  :country: United States
+- :id: 496
+  :name: Aquatica San Antonio
+  :city: San Antonio
+  :state: Texas
+  :country: United States
+- :id: 497
+  :name: Galveston Island Historic Pleasure Pier
+  :city: Galveston
+  :state: Texas
+  :country: United States
+- :id: 498
+  :name: Grand Texas Theme Park
+  :city: New Caney
+  :state: Texas
+  :country: United States
+- :id: 499
+  :name: Joyland Amusement Park
+  :city: Lubbock
+  :state: Texas
+  :country: United States
+- :id: 507
+  :name: Kemah Boardwalk
+  :city: Kemah
+  :state: Texas
+  :country: United States
+- :id: 508
+  :name: Morgan's Wonderland
+  :city: San Antonio
+  :state: Texas
+  :country: United States
+- :id: 509
+  :name: NRH2O
+  :city: North Richland Hills
+  :state: Texas
+  :country: United States
+- :id: 510
+  :name: Sandy Lake Amusement Park
+  :city: Carrollton
+  :state: Texas
+  :country: United States
+- :id: 511
+  :name: Schlitterbahn
+  :city: New Braunfels
+  :state: Texas
+  :country: United States
+- :id: 515
+  :name: SeaWorld San Antonio
+  :city: San Antonio
+  :state: Texas
+  :country: United States
+- :id: 516
+  :name: Splashtown San Antonio
+  :city: San Antonio
+  :state: Texas
+  :country: United States
+- :id: 517
+  :name: Six Flags Fiesta Texas
+  :city: San Antonio
+  :state: Texas
+  :country: United States
+- :id: 518
+  :name: Six Flags Hurricane Harbor
+  :city: Arlington
+  :state: Texas
+  :country: United States
+- :id: 519
+  :name: Six Flags Over Texas
+  :city: Arlington
+  :state: Texas
+  :country: United States
+- :id: 520
+  :name: Wet'n'Wild SplashTown
+  :city: Spring
+  :state: Texas
+  :country: United States
+- :id: 521
+  :name: Wonderland Park (Texas)
+  :city: Amarillo
+  :state: Texas
+  :country: United States
+- :id: 522
+  :name: ZDT'S Amusement Center
+  :city: Seguin
+  :state: Texas
+  :country: United States
+- :id: 525
+  :name: Cherry Hill Resort
+  :city: Kaysville
+  :state: Utah
+  :country: United States
+- :id: 526
+  :name: Lagoon Amusement Park
+  :city: Farmington
+  :state: Utah
+  :country: United States
+- :id: 527
+  :name: Seven Peaks Water Park
+  :city: Provo
+  :state: Utah
+  :country: United States
+- :id: 529
+  :name: Bromley Mountain
+  :city: Peru
+  :state: Vermont
+  :country: United States
+- :id: 530
+  :name: Okemo Mountain
+  :city: Ludlow
+  :state: Vermont
+  :country: United States
+- :id: 531
+  :name: Smugglers' Notch
+  :city: Jeffersonville
+  :state: Vermont
+  :country: United States
+- :id: 533
+  :name: Busch Gardens Williamsburg
+  :city: Williamsburg
+  :state: Virginia
+  :country: United States
+- :id: 534
+  :name: Go-Karts Plus
+  :city: Williamsburg
+  :state: Virginia
+  :country: United States
+- :id: 535
+  :name: Kings Dominion
+  :city: Doswell
+  :state: Virginia
+  :country: United States
+- :id: 536
+  :name: Ocean Breeze Waterpark
+  :city: Virginia Beach
+  :state: Virginia
+  :country: United States
+- :id: 537
+  :name: Water Country USA
+  :city: Williamsburg
+  :state: Virginia
+  :country: United States
+- :id: 539
+  :name: Fun House Discovery Center
+  :city: Orcas Island
+  :state: Washington (state)
+  :country: United States
+- :id: 540
+  :name: Riverfront Park (Spokane, Washington)
+  :city: Spokane
+  :state: Washington (state)
+  :country: United States
+- :id: 541
+  :name: Wild Waves Theme Park
+  :city: Federal Way
+  :state: Washington (state)
+  :country: United States
+- :id: 542
+  :name: Wonderland Family Fun Center
+  :city: Spokane
+  :state: Washington (state)
+  :country: United States
+- :id: 544
+  :name: Camden Park (amusement park)
+  :city: Huntington
+  :state: West Virginia
+  :country: United States
+- :id: 546
+  :name: Kalahari Resorts
+  :city: Wisconsin Dells
+  :state: Wisconsin
+  :country: United States
+- :id: 547
+  :name: Little Amerricka
+  :city: Marshall
+  :state: Wisconsin
+  :country: United States
+- :id: 548
+  :name: Mt. Olympus Water & Theme Park
+  :city: Wisconsin Dells
+  :state: Wisconsin
+  :country: United States
+- :id: 549
+  :name: Noah's Ark Waterpark
+  :city: Wisconsin Dells
+  :state: Wisconsin
+  :country: United States
+- :id: 550
+  :name: Riverside Amusement Park (La Crosse)
+  :city: La Crosse
+  :state: Wisconsin
+  :country: United States
+- :id: 551
+  :name: Riverview Park & Waterworld
+  :city: Wisconsin Dells
+  :state: Wisconsin
+  :country: United States
+- :id: 552
+  :name: Timbavatvi Wildlife Park/Storybook Gardens
+  :city: Wisconsin Dells
+  :state: Wisconsin
+  :country: United States
+- :id: 554
+  :name: Cowboy Carousel & Amusement Park
+  :city: Buffalo
+  :state: Wyoming
+  :country: United States
+- :id: 556
+  :name: Cayo Lobos Marine Park
+  :city: Cayo Lobos
+  :state: Puerto Rico
+  :country: United States
+- :id: 557
+  :name: Children's Dream Park
+  :city: Añasco
+  :state: Puerto Rico
+  :country: United States
+- :id: 558
+  :name: Fun Valley Park
+  :city: Arecibo
+  :state: Puerto Rico
+  :country: United States
+- :id: 559
+  :name: Jungle Park PR
+  :city: Bayamón
+  :state: Puerto Rico
+  :country: United States
+- :id: 560
+  :name: Parque de las Ciencias
+  :city: Bayamón
+  :state: Puerto Rico
+  :country: United States
+- :id: 561
+  :name: Villa Campestre
+  :city: Guynado
+  :state: Puerto Rico
+  :country: United States
+- :id: 562
+  :name: WonderPark
+  :city: Carolina
+  :state: Puerto Rico
+  :country: United States
