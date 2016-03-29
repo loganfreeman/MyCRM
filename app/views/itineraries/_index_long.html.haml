@@ -4,7 +4,7 @@
     = hook(:itinerary_tools_before, self, :itinerary => itinerary)
 
     - if can?(:update, itinerary)
-      %li= link_to_edit(itinerary)
+      %li= link_to(t(:edit), url_for(itinerary))
 
     - if shown_on_landing_page?
       %li= link_to_discard(itinerary)
