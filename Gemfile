@@ -87,3 +87,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'table_cloth'
 gem 'grape'
 gem 'angularjs-rails'
+gem 'money-rails'

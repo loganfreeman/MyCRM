@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329163132) do
+ActiveRecord::Schema.define(version: 20160329205905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,22 @@ ActiveRecord::Schema.define(version: 20160329163132) do
 
   add_index "addresses", ["addressable_id", "addressable_type"], name: "index_addresses_on_addressable_id_and_addressable_type", using: :btree
 
+  create_table "airports", force: :cascade do |t|
+    t.string  "ident"
+    t.string  "name"
+    t.string  "city"
+    t.string  "size"
+    t.string  "keywords"
+    t.boolean "scheduled_service"
+    t.float   "lat"
+    t.float   "lon"
+    t.string  "iata_code"
+    t.string  "local_code"
+  end
+
+  add_index "airports", ["ident"], name: "index_airports_on_ident", using: :btree
+  add_index "airports", ["scheduled_service"], name: "index_airports_on_scheduled_service", using: :btree
+
   create_table "avatars", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "entity_id"
@@ -95,6 +111,17 @@ ActiveRecord::Schema.define(version: 20160329163132) do
     t.integer  "image_file_size"
     t.string   "image_file_name"
     t.string   "image_content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bus_journeys", force: :cascade do |t|
+    t.string   "from"
+    t.string   "to"
+    t.date     "date"
+    t.string   "operator"
+    t.boolean  "booked"
+    t.money    "cost",       scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -199,6 +226,15 @@ ActiveRecord::Schema.define(version: 20160329163132) do
 
   add_index "contacts", ["assigned_to"], name: "index_contacts_on_assigned_to", using: :btree
   add_index "contacts", ["user_id", "last_name", "deleted_at"], name: "id_last_name_deleted", unique: true, using: :btree
+
+  create_table "currencies", force: :cascade do |t|
+    t.string   "iso_code"
+    t.string   "name"
+    t.string   "format",         default: "%{amount} %{iso_code}"
+    t.integer  "decimal_digits", default: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
@@ -308,6 +344,16 @@ ActiveRecord::Schema.define(version: 20160329163132) do
 
   add_index "fields", ["field_group_id"], name: "index_fields_on_field_group_id", using: :btree
   add_index "fields", ["name"], name: "index_fields_on_name", using: :btree
+
+  create_table "flights", force: :cascade do |t|
+    t.integer  "plane_journey_id"
+    t.datetime "departure"
+    t.datetime "arrival"
+    t.integer  "from_id"
+    t.integer  "to_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
@@ -465,6 +511,17 @@ ActiveRecord::Schema.define(version: 20160329163132) do
   add_index "permissions", ["group_id"], name: "index_permissions_on_group_id", using: :btree
   add_index "permissions", ["user_id"], name: "index_permissions_on_user_id", using: :btree
 
+  create_table "plane_journeys", force: :cascade do |t|
+    t.boolean  "booked"
+    t.boolean  "paid"
+    t.decimal  "cost",         precision: 7, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "itinerary_id"
+  end
+
+  add_index "plane_journeys", ["itinerary_id"], name: "index_plane_journeys_on_itinerary_id", using: :btree
+
   create_table "preferences", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name",       limit: 32, default: "", null: false
@@ -491,6 +548,15 @@ ActiveRecord::Schema.define(version: 20160329163132) do
   add_index "restaurants", ["assigned_to"], name: "index_restaurants_on_assigned_to", using: :btree
   add_index "restaurants", ["user_id", "name", "deleted_at"], name: "index_restaurants_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
 
+  create_table "scheduled_costs", force: :cascade do |t|
+    t.date     "date"
+    t.money    "cost",        scale: 2
+    t.string   "city"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -509,6 +575,18 @@ ActiveRecord::Schema.define(version: 20160329163132) do
   end
 
   add_index "settings", ["name"], name: "index_settings_on_name", using: :btree
+
+  create_table "stays", force: :cascade do |t|
+    t.integer  "lodging_id"
+    t.date     "checkin"
+    t.date     "checkout"
+    t.boolean  "booked"
+    t.boolean  "paid"
+    t.decimal  "cost",       precision: 7, scale: 2
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
