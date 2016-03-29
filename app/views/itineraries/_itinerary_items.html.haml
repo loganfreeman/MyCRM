@@ -4,9 +4,8 @@
   = subtitle(:itinerary_items, collapsed, t(:itinerary_items))
   %div
     %div{ hidden_if(collapsed) }
-      = render :partial => "itineraries/new_itinerary_item"
       .list
         - itinerary_items = itinerary.itinerary_items.paginate(:page => 1, :per_page => 20)
-        = render :partial => "itineraries/itinerary_item", :collection => itinerary_items
+        = render :partial => "itinerary_items", :collection => itinerary_items
 
       = paginate( collection: itinerary_items, id: 'itinerary_items_pagination', params: { action: 'itinerary_items' } )
