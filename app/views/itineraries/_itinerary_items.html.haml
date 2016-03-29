@@ -1,7 +1,17 @@
+- model_name = 'itinerary_item'
+- controller_name = 'ItineraryItems'
 %div#itinerary_items
   - collapsed = itinerary.itinerary_items.size.zero?
   %br
+
+  .title_tools
+    #buttons
+      = view_buttons
+    .create_asset
+      = link_to_inline("create_#{model_name}".to_sym, send("new_#{model_name}_path"), :text => t("create_#{model_name}".to_sym))
+
   = subtitle(:itinerary_items, collapsed, t(:itinerary_items))
+
   %div
     %div{ hidden_if(collapsed) }
       .list
