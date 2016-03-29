@@ -65,6 +65,7 @@ Rails.application.routes.draw do
       post :subscribe
       post :unsubscribe
       get :opportunities
+      get :add_itinerary_item
     end
   end
 

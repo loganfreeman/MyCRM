@@ -4,11 +4,12 @@
     %table
       %tr
         %td
-          != itinerary_select()
-      %tr
-        %td
           .label.top{ :class => 'req' } #{t :order_date}:
           = f.date_field :order_date, :autofocus => true
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :itinerary_item_description}:
+          = f.text_area :description
 
       - if Setting.background_info && Setting.background_info.include?(:lead)
         %tr

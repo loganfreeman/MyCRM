@@ -1,0 +1,10 @@
+%li.highlight[itinerary_item]
+
+  .indentslim
+    = link_to content_tag(:span, itinerary_item.description, class: "truncate"), itinerary_item
+
+    - if itinerary_item.tag_list.present?
+      %dt
+        .tags= tags_for_index(itinerary_item)
+
+    = hook(:itinerary_item_bottom, self, :itinerary_item => itinerary_item)

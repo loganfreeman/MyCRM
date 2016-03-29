@@ -1,22 +1,22 @@
 - model_name = 'itinerary_item'
 - controller_name = 'ItineraryItems'
-%div#itinerary_items
-  - collapsed = itinerary.itinerary_items.size.zero?
+%div
+  - collapsed = @itinerary.itinerary_items.size.zero?
   %br
 
   .title_tools
     #buttons
       = view_buttons
     .create_asset
-      = link_to_inline("create_#{model_name}".to_sym, send("new_#{model_name}_path"), :text => t("create_#{model_name}".to_sym))
+      = link_to_inline("create_#{model_name}".to_sym, send("add_itinerary_item_itinerary_path"), :text => t("create_#{model_name}".to_sym))
 
   = subtitle(:itinerary_items, collapsed, t(:itinerary_items))
 
   %div
     %div{ hidden_if(collapsed) }
       .remote#create_itinerary_item{ hidden }
-      .list
-        - itinerary_items = itinerary.itinerary_items.paginate(:page => 1, :per_page => 20)
-        = render :partial => "itinerary_items", :collection => itinerary_items
+      .list#itinerary_items
+        - itinerary_items = @itinerary.itinerary_items.paginate(:page => 1, :per_page => 20)
+        = render :partial => "itinerary_items/itinerary_item", :collection => itinerary_items
 
       = paginate( collection: itinerary_items, id: 'itinerary_items_pagination', params: { action: 'itinerary_items' } )

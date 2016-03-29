@@ -23,6 +23,10 @@ class ItinerariesController < EntitiesController
     respond_with(@itinerary)
   end
 
+  def add_itinerary_item
+    respond_with(@itinerary)
+  end
+
   # GET /itineraries/1/edit                                                   AJAX
   #----------------------------------------------------------------------------
   def edit

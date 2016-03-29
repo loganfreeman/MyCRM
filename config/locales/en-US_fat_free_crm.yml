@@ -348,6 +348,7 @@ en-US:
   create_itinerary_item: Add Itinerary Item
   order_date: Itinerary Item Date
   select_an_itinerary: Select an itienerary
+  itinerary_item_description: Itinerary Item Description
 
   # Views -> Hotels
   hotel: Hotel
