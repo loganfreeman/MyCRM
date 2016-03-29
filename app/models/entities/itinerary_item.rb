@@ -1,4 +1,5 @@
 class ItineraryItem < ActiveRecord::Base
+  serialize :subscribed_users, Set
   belongs_to  :itinerary
   acts_as_commentable
   uses_comment_extensions

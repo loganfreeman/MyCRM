@@ -12,10 +12,9 @@
 
   = subtitle(:itinerary_items, collapsed, t(:itinerary_items))
 
-  .remote#create_itinerary_item{ hidden }
-
   %div
     %div{ hidden_if(collapsed) }
+      .remote#create_itinerary_item{ hidden }
       .list
         - itinerary_items = itinerary.itinerary_items.paginate(:page => 1, :per_page => 20)
         = render :partial => "itinerary_items", :collection => itinerary_items

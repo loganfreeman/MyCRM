@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329154344) do
+ActiveRecord::Schema.define(version: 20160329163132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -361,11 +361,12 @@ ActiveRecord::Schema.define(version: 20160329154344) do
   create_table "itinerary_items", force: :cascade do |t|
     t.datetime "order_date"
     t.integer  "itinerary_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "description"
-    t.string   "uuid",         limit: 36
+    t.string   "uuid",             limit: 36
     t.datetime "deleted_at"
+    t.text     "subscribed_users"
   end
 
   add_index "itinerary_items", ["itinerary_id"], name: "index_itinerary_items_on_itinerary_id", using: :btree

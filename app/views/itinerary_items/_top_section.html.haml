@@ -1,0 +1,18 @@
+
+= hook(:itinerary_item_top_section, self, :f => f) do
+  .section
+    %table
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :order_date}:
+          = f.date_field :order_date, :autofocus => true
+
+      - if Setting.background_info && Setting.background_info.include?(:lead)
+        %tr
+          %td(colspan="3")
+            .label= t(:background_info) << ':'
+            = f.text_area :background_info, :style =>"width:500px", :rows => 3
+
+      = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
+
+      = hook(:itinerary_item_top_section_bottom, self, :f => f)
