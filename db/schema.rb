@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328214209) do
+ActiveRecord::Schema.define(version: 20160329051758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -363,6 +363,7 @@ ActiveRecord::Schema.define(version: 20160328214209) do
     t.integer  "itinerary_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "description"
   end
 
   add_index "itinerary_items", ["itinerary_id"], name: "index_itinerary_items_on_itinerary_id", using: :btree

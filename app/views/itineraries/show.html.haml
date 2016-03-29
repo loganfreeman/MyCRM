@@ -7,8 +7,9 @@
   = render 'itineraries/title_bar', :itinerary => @itinerary
 
   = render "comments/new", :commentable => @itinerary
+  = render "itineraries/add_itinerary_item", :itinerary => @itinerary
   = render :partial => "shared/timeline", :collection => @timeline
 
   = hook(:show_itinerary_bottom, self, {entity: @itinerary}) do
-    
+
     = render :partial => "versions/versions", :locals => {:object => @itinerary}

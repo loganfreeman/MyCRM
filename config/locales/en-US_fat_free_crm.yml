@@ -341,9 +341,11 @@ en-US:
   itinerary: Itinerary
   itinerary_name: Itinerary Name
   itineraries: Itineraries
+  itinerary_items: Itinerary Items
   create_itinerary: Create Itinerary
   my_itineraries: My Itineraries
   no_itinerary_records: You have no my_itineraries.
+  create_itinerary_item: Add Itinerary Item
 
   # Views -> Hotels
   hotel: Hotel

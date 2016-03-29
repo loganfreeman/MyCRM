@@ -1,5 +1,5 @@
 class Itinerary < ActiveRecord::Base
-  has_many :itinerary_item
+  has_many :itinerary_items
   belongs_to :user
   belongs_to :account
   belongs_to :assignee, class_name: "User", foreign_key: :assigned_to
