@@ -347,6 +347,7 @@ en-US:
   no_itinerary_records: You have no my_itineraries.
   create_itinerary_item: Add Itinerary Item
   order_date: Itinerary Item Date
+  select_an_itinerary: Select an itienerary
 
   # Views -> Hotels
   hotel: Hotel

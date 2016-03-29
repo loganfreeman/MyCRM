@@ -34,6 +34,16 @@ module AccountsHelper
                       class: 'ajax_chosen'
   end
 
+  def itinerary_select(options = {})
+    options[:selected] = (@itinerary && @itinerary.id) || 0
+    itineraries = ([@itinerary] + Itinerary.my.order(:name).limit(25)).compact.uniq
+    collection_select :itinerary_item, :itinerary_id, itineraries, :id, :name, options,
+                      :"data-placeholder" => t(:select_an_itinerary),
+                      :"data-url" => auto_complete_itineraries_path(format: 'json'),
+                      style: "width:330px; display:none;",
+                      class: 'ajax_chosen'
+  end
+
   # Select an existing account or create a new one.
   #----------------------------------------------------------------------------
   def account_select_or_create(form, &_block)
