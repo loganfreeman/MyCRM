@@ -109,7 +109,7 @@ class EntitiesController < ApplicationController
 
   #----------------------------------------------------------------------------
   def entities
-    instance_variable_get("@#{controller_name}") || klass.my
+    instance_variable_get("@#{controller_name}") || (klass.respond_to?(:my) ? klass.my : klass.all)
   end
 
   def set_options

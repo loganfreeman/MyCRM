@@ -37,7 +37,6 @@ class ItineraryItemsController < EntitiesController
     @comment_body = params[:comment_body]
     respond_with(@itinerary_item) do |_format|
       if @itinerary_item.save
-        @itinerary_item.add_comment_by_user(@comment_body, current_user)
         # None: itinerary_item can only be created from the ItineraryItems index page, so we
         # don't have to check whether we're on the index page.
         @itinerary_items = get_itinerary_items
