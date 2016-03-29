@@ -12,6 +12,8 @@
 
   = subtitle(:itinerary_items, collapsed, t(:itinerary_items))
 
+  .remote#create_itinerary_item{ hidden }
+
   %div
     %div{ hidden_if(collapsed) }
       .list
