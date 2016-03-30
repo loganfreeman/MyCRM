@@ -349,6 +349,7 @@ en-US:
   order_date: Itinerary Item Date
   select_an_itinerary: Select an itienerary
   itinerary_item_description: Itinerary Item Description
+  activity: Activity
 
   # Views -> Hotels
   hotel: Hotel

@@ -1,0 +1,11 @@
+= subtitle :itinerary_item_general_info, false, t(:general_info)
+.section
+  %table
+    %tr
+      %td
+        .label #{t :activity}:
+        = @itinerary_item.description
+      %td= spacer
+      %td
+        .label #{t :order_date}:
+        = @itinerary_item.order_date

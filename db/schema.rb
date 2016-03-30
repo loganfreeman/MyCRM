@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329205905) do
+ActiveRecord::Schema.define(version: 20160330042455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -370,6 +370,21 @@ ActiveRecord::Schema.define(version: 20160329205905) do
   add_index "groups_users", ["group_id"], name: "index_groups_users_on_group_id", using: :btree
   add_index "groups_users", ["user_id"], name: "index_groups_users_on_user_id", using: :btree
 
+  create_table "guide_drivers", force: :cascade do |t|
+    t.integer  "itinerary_items_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "guide"
+    t.integer  "driver"
+    t.decimal  "tip",                precision: 7, scale: 2
+    t.decimal  "other",              precision: 7, scale: 2
+    t.decimal  "overtime",           precision: 7, scale: 2
+    t.string   "currency"
+  end
+
+  create_table "hotel_reservations", force: :cascade do |t|
+  end
+
   create_table "hotels", force: :cascade do |t|
     t.string   "uuid",             limit: 36
     t.integer  "user_id"
@@ -460,6 +475,9 @@ ActiveRecord::Schema.define(version: 20160329205905) do
 
   add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
+  create_table "meals", force: :cascade do |t|
+  end
+
   create_table "opportunities", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "campaign_id"
@@ -481,6 +499,15 @@ ActiveRecord::Schema.define(version: 20160329205905) do
 
   add_index "opportunities", ["assigned_to"], name: "index_opportunities_on_assigned_to", using: :btree
   add_index "opportunities", ["user_id", "name", "deleted_at"], name: "id_name_deleted", unique: true, using: :btree
+
+  create_table "park_tickets", force: :cascade do |t|
+    t.integer  "itinerary_items_id"
+    t.string   "park"
+    t.decimal  "cost",               precision: 7, scale: 2
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "parks", force: :cascade do |t|
     t.string   "uuid",             limit: 36
@@ -576,6 +603,16 @@ ActiveRecord::Schema.define(version: 20160329205905) do
 
   add_index "settings", ["name"], name: "index_settings_on_name", using: :btree
 
+  create_table "snacks", force: :cascade do |t|
+    t.integer  "itinerary_items_id"
+    t.string   "kind"
+    t.string   "description"
+    t.decimal  "cost",               precision: 7, scale: 2
+    t.string   "currency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "stays", force: :cascade do |t|
     t.integer  "lodging_id"
     t.date     "checkin"
@@ -629,6 +666,9 @@ ActiveRecord::Schema.define(version: 20160329205905) do
 
   add_index "tasks", ["assigned_to"], name: "index_tasks_on_assigned_to", using: :btree
   add_index "tasks", ["user_id", "name", "deleted_at"], name: "index_tasks_on_user_id_and_name_and_deleted_at", unique: true, using: :btree
+
+  create_table "transportations", force: :cascade do |t|
+  end
 
   create_table "transports", force: :cascade do |t|
     t.string   "uuid",             limit: 36
