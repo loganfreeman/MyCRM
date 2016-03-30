@@ -85,6 +85,7 @@ Rails.application.routes.draw do
       post :subscribe
       post :unsubscribe
       get :opportunities
+      match :add_meal, via: [:get, :post]
     end
   end
 

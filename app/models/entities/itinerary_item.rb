@@ -4,6 +4,7 @@ class ItineraryItem < ActiveRecord::Base
   acts_as_commentable
   uses_comment_extensions
   acts_as_taggable_on :tags
+  has_many :meals
   has_paper_trail class_name: 'Version', ignore: [:subscribed_users]
   has_fields
   exportable

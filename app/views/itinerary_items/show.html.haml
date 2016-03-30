@@ -26,6 +26,7 @@
       .remote#add_meal{ hidden }
       %small#add_meal_intro
         = t(:add_meal_intro)
+        = link_to_inline(:add_meal_button, add_meal_itinerary_item_path(@itinerary_item), :text => t(:add))
 
 %div
   = subtitle :add_snack_subtitle, false, t(:add_snack)
