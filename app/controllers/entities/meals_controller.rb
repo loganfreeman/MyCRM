@@ -28,13 +28,9 @@ class MealsController < EntitiesController
   def show
     respond_with(@meal) do |format|
       format.html do
-        @comment = Comment.new
-        @timeline = timeline(@meal)
       end
 
       format.js do
-        @comment = Comment.new
-        @timeline = timeline(@meal)
       end
 
       format.xls do
@@ -95,8 +91,8 @@ class MealsController < EntitiesController
   #----------------------------------------------------------------------------
   def update
     respond_with(@meal) do |_format|
-      # Must set access before user_ids, because user_ids= method depends on access value.
-      @meal.access = resource_params[:access] if resource_params[:access]
+      @meal.update_attributes(params.require(:meal).permit!)
+      @meal.save
     end
   end
 

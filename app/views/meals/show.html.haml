@@ -1,0 +1,27 @@
+%div
+  .title_tools
+    #buttons
+      = view_buttons
+    .edit_asset
+      = link_to_inline(:edit_meal, edit_meal_path(@meal), :text => t(:edit))
+
+  = subtitle :general_info_subtitle, false, t(:general_info)
+  %div.section
+    %div
+      .remote#edit_meal{ hidden }
+      %table
+        %tr
+          %td
+            .label #{t :breakfast}:
+          %td
+            = @meal.breakfast
+        %tr
+          %td
+            .label #{t :lunch}:
+          %td
+            = @meal.lunch
+        %tr
+          %td
+            .label #{t :dinner}:
+          %td
+            = @meal.dinner

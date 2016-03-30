@@ -26,7 +26,7 @@
       .remote#add_meal{ hidden }
       .list#meals
         - if @itinerary_item.meals.any?
-          = render :partial => "itinerary_items/meal", :collection => @itinerary_item.meals
+          = render :partial => "meals/meal", :collection => @itinerary_item.meals
         - else
           #empty
             == #{t :feel_free} #{link_to(t(:create_meal), add_meal_itinerary_item_path(@itinerary_item), :remote => true)}.

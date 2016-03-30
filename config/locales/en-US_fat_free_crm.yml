@@ -364,6 +364,7 @@ en-US:
   add_snack_intro: Add snack information to the itinerary item
   add_guide_and_driver: Guide and driver
   add_guide_and_driver_intro: Add guide and driver information to the itinerary item
+  edit_meal: Edit Meal
 
   # Views -> Hotels
   hotel: Hotel
