@@ -18,3 +18,51 @@
           %td
             .label #{t :order_date}:
             = @itinerary_item.order_date
+
+%div
+  = subtitle :add_meal_subtitle, false, t(:add_meal)
+  %div.section
+    %div
+      .remote#add_meal{ hidden }
+      %small#add_meal_intro
+        = t(:add_meal_intro)
+
+%div
+  = subtitle :add_snack_subtitle, false, t(:add_snack)
+  %div.section
+    %div
+      .remote#add_snack{ hidden }
+      %small#add_snack_intro
+        = t(:add_snack)
+
+%div
+  = subtitle :add_hotel_reservation_subtitle, false, t(:add_hotel_reservation)
+  %div.section
+    %div
+      .remote#add_hotel_reservation{ hidden }
+      %small#add_hotel_reservation_intro
+        = t(:add_hotel_reservation)
+
+%div
+  = subtitle :add_transportation_subtitle, false, t(:add_transportation)
+  %div.section
+    %div
+      .remote#add_transportation{ hidden }
+      %small#add_transportation_intro
+        = t(:add_transportation)
+
+%div
+  = subtitle :add_guide_and_driver_subtitle, false, t(:add_guide_and_driver)
+  %div.section
+    %div
+      .remote#add_guide_and_driver{ hidden }
+      %small#add_guide_and_driver_intro
+        = t(:add_guide_and_driver)
+
+%div
+  = subtitle :add_park_ticket_subtitle, false, t(:add_park_ticket)
+  %div.section
+    %div
+      .remote#add_park_ticket{ hidden }
+      %small#add_park_ticket_intro
+        = t(:add_park_ticket)

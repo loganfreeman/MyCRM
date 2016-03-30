@@ -351,6 +351,18 @@ en-US:
   itinerary_item_description: Itinerary Item Description
   activity: Activity
   edit_itinerary_item: Edit Itinerary Item
+  add_meal: Add a meal
+  add_meal_intro: Add meals to the itinerary item
+  add_hotel_reservation: Add a hotel reservation
+  add_hotel_reservation_intro: Add hotel reservations to the itinerary item
+  add_transportation: Add a transportation
+  add_transportation_intro: Add transportations to the itinerary item
+  add_park_ticket: Add a park ticket
+  add_park_ticket_intro: Add park tickets information to the itinerary item
+  add_snack: Add snack
+  add_snack_intro: Add snack information to the itinerary item
+  add_guide_and_driver: Add guide and driver
+  add_guide_and_driver_intro: Add guide and driver information to the itinerary item 
 
   # Views -> Hotels
   hotel: Hotel
