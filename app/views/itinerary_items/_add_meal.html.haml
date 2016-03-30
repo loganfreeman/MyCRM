@@ -1,0 +1,19 @@
+- meal = @itinerary_item.meals.new
+= simple_form_for(meal, :html => one_submit_only, :remote => true) do |f|
+  = link_to_close new_meal_path
+  = f.hidden_field 'itinerary_item_id', :value => @itinerary_item.id
+
+  = f.error_messages :object_name => t('meal')
+
+  = render "meals/top_section",    :f => f
+  = render "fields/edit_custom_field_group", :f => f
+  = render "fields/groups",        :f => f
+  = hook(:entity_form, self, {f: f, entity: @meal})
+
+  .buttonbar
+    - if Setting.compound_address
+      = f.submit t(:create_meal), :onclick => "crm.clear_all_hints()"
+    - else
+      = f.submit t(:create_meal)
+    #{t :or}
+    = link_to_cancel new_meal_path

@@ -24,9 +24,13 @@
   %div.section
     %div
       .remote#add_meal{ hidden }
-      %small#add_meal_intro
-        = t(:add_meal_intro)
-        = link_to_inline(:add_meal_button, add_meal_itinerary_item_path(@itinerary_item), :text => t(:add))
+      .list#meals
+        - if @itinerary_item.meals.any?
+          = render :partial => "itinerary_items/meal", :collection => @itinerary_item.meals
+        - else
+          #empty
+            == #{t :feel_free} #{link_to(t(:create_meal), add_meal_itinerary_item_path(@itinerary_item), :remote => true)}.
+
 
 %div
   = subtitle :add_snack_subtitle, false, t(:add_snack)
@@ -35,6 +39,7 @@
       .remote#add_snack{ hidden }
       %small#add_snack_intro
         = t(:add_snack)
+
 
 %div
   = subtitle :add_hotel_reservation_subtitle, false, t(:add_hotel_reservation)

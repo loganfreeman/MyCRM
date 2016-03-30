@@ -89,6 +89,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :meals, id: /\d+/ do
+  end
+
   resources :conferences, id: /\d+/ do
     collection do
       get :advanced_search

@@ -32,8 +32,7 @@ class ItineraryItemsController < EntitiesController
   end
 
   def add_meal
-    @meal = @itinerary_item.meals.new
-    respond_with(@meal)
+    respond_with(@itinerary_item)
   end
 
   # POST /itinerary_items

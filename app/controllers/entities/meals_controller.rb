@@ -1,0 +1,2 @@
+class MealsController < EntitiesController
+end
