@@ -1,11 +1,19 @@
-= subtitle :itinerary_item_general_info, false, t(:general_info)
-.section
-  %table
-    %tr
-      %td
-        .label #{t :activity}:
-        = @itinerary_item.description
-      %td= spacer
-      %td
-        .label #{t :order_date}:
-        = @itinerary_item.order_date
+%div
+  .title_tools
+    #buttons
+      = view_buttons
+    .edit_asset
+      = link_to_inline(:edit_itinerary_item, edit_itinerary_item_path(@itinerary_item), :text => t(:edit))
+
+  = subtitle :general_info_subtitle, false, t(:general_info)
+  %div.section
+    %div
+      %table
+        %tr
+          %td
+            .label #{t :activity}:
+            = @itinerary_item.description
+          %td= spacer
+          %td
+            .label #{t :order_date}:
+            = @itinerary_item.order_date
