@@ -1,0 +1,17 @@
+= simple_form_for(@itinerary_item, :html => one_submit_only, :remote => true) do |f|
+  = link_to_close edit_itinerary_item_path
+
+  = f.error_messages :object_name => t('itinerary_item')
+
+  = render "itinerary_items/top_section",    :f => f
+  = render "fields/edit_custom_field_group", :f => f
+  = render "fields/groups",        :f => f
+  = hook(:entity_form, self, {f: f, entity: @itinerary_item})
+
+  .buttonbar
+    - if Setting.compound_address
+      = f.submit t(:edit_itinerary_item), :onclick => "crm.clear_all_hints()"
+    - else
+      = f.submit t(:edit_itinerary_item)
+    #{t :or}
+    = link_to_cancel edit_itinerary_item_path

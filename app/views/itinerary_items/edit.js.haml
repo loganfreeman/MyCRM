@@ -1,0 +1,11 @@
+- entity_name = controller.controller_name.singularize # account
+- edit_id = "edit_#{entity_name}"
+
+crm.flick('empty', 'toggle');
+crm.flip_form('#{edit_id}');
+
+- unless params[:cancel].true?
+  $('##{edit_id}').html('#{ j render(:partial => "edit") }');
+  crm.set_title('#{edit_id}', '#{ j t(edit_id) }');
+- else
+  crm.set_title('#{edit_id}', '#{ j t(entity_name.pluralize) }');

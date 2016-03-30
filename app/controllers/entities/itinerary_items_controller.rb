@@ -49,8 +49,8 @@ class ItineraryItemsController < EntitiesController
   def update
     respond_with(@itinerary_item) do |_format|
       # Must set access before user_ids, because user_ids= method depends on access value.
-      @itinerary_item.access = params[:itinerary_item][:access] if params[:itinerary_item][:access]
-      get_data_for_sidebar if @itinerary_item.update_attributes(resource_params)
+      @itinerary_item.update_attributes(params.require(:itinerary_item).permit!)
+      @itinerary_item.save
     end
   end
 
@@ -110,7 +110,6 @@ class ItineraryItemsController < EntitiesController
   def respond_to_destroy(method)
     if method == :ajax
       @itinerary_items = get_itinerary_items
-      get_data_for_sidebar
       if @itinerary_items.empty?
         @itinerary_items = get_itinerary_items(page: current_page - 1) if current_page > 1
         render(:index) && return

@@ -350,6 +350,7 @@ en-US:
   select_an_itinerary: Select an itienerary
   itinerary_item_description: Itinerary Item Description
   activity: Activity
+  edit_itinerary_item: Edit Itinerary Item
 
   # Views -> Hotels
   hotel: Hotel
