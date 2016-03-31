@@ -1,0 +1,23 @@
+%div
+  .title_tools
+    #buttons
+      = view_buttons
+      = link_to t(:back), itinerary_item_path(@park_ticket.itinerary_item_id)
+    .edit_asset
+      = link_to_inline(:edit_park_ticket, edit_park_ticket_path(@park_ticket), :text => t(:edit))
+
+  = subtitle :general_info_subtitle, false, t(:general_info)
+  %div.section
+    %div
+      .remote#edit_park_ticket{ hidden }
+      %table
+        %tr
+          %td
+            .label #{t :park}:
+          %td
+            = @park_ticket.park
+        %tr
+          %td
+            .label #{t :cost}:
+          %td
+            = @park_ticket.cost
