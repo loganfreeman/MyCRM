@@ -2,7 +2,7 @@
   .title_tools
     #buttons
       = view_buttons
-      = link_to t(:back), itinerary_item_path(@park_ticket.itinerary_item_id)
+      = link_to t(:back), itinerary_item_path(@meal.itinerary_item_id)
     .edit_asset
       = link_to_inline(:edit_meal, edit_meal_path(@meal), :text => t(:edit))
 
