@@ -1,0 +1,19 @@
+- park_ticket = @itinerary_item.park_tickets.new
+= simple_form_for(park_ticket, :html => one_submit_only, :remote => true) do |f|
+  = link_to_close new_park_ticket_path
+  = f.hidden_field 'itinerary_item_id', :value => @itinerary_item.id
+
+  = f.error_messages :object_name => t('park_ticket')
+
+  = render "park_tickets/top_section",    :f => f
+  = render "fields/edit_custom_field_group", :f => f
+  = render "fields/groups",        :f => f
+  = hook(:entity_form, self, {f: f, entity: @park_ticket})
+
+  .buttonbar
+    - if Setting.compound_address
+      = f.submit t(:create_park_ticket), :onclick => "crm.clear_all_hints()"
+    - else
+      = f.submit t(:create_park_ticket)
+    #{t :or}
+    = link_to_cancel new_park_ticket_path
