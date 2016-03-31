@@ -35,6 +35,22 @@ class ItineraryItemsController < EntitiesController
     respond_with(@itinerary_item)
   end
 
+  def add_snack
+    respond_with(@itinerary_item)
+  end
+
+  def add_park_ticket
+    respond_with(@itinerary_item)
+  end
+
+  def add_hotel_reservation
+    respond_with(@itinerary_item)
+  end
+
+  def add_guide_driver
+    respond_with(@itinerary_item)
+  end
+
   # POST /itinerary_items
   #----------------------------------------------------------------------------
   def create
