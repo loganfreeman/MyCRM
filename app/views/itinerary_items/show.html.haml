@@ -2,6 +2,7 @@
   .title_tools
     #buttons
       = view_buttons
+      = link_to t(:back), itinerary_path(@itinerary_item.itinerary_id)
     .edit_asset
       = link_to_inline(:edit_itinerary_item, edit_itinerary_item_path(@itinerary_item), :text => t(:edit))
 
