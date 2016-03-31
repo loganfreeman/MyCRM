@@ -1,4 +1,4 @@
-= hook(:meal_top_section, self, :f => f) do
+= hook(:hotel_reservation_top_section, self, :f => f) do
   .section
     %table
       %tr
@@ -16,4 +16,4 @@
 
       = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
 
-      = hook(:meal_top_section_bottom, self, :f => f)
+      = hook(:hotel_reservation_top_section_bottom, self, :f => f)
