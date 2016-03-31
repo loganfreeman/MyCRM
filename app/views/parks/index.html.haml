@@ -1,0 +1,16 @@
+= styles_for :park
+
+= render 'entities/title_bar'
+
+= render "search"
+
+.remote#options{ hidden }
+
+.list#parks
+  - if @parks.any?
+    = render @parks
+  - else
+    = render "shared/empty"
+
+#paginate= render "shared/paginate_with_per_page"
+#export= render "shared/export"

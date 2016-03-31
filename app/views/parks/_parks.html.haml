@@ -1,0 +1,8 @@
+
+= section(object, :parks)
+.list#parks
+  - parks = object.parks.paginate(:page => 1, :per_page => 20)
+
+  = render :partial => "parks/park", :collection => parks
+
+= paginate( collection: parks, id: 'parks_pagination', params: { action: 'parks' } )
