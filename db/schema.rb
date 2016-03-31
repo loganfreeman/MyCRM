@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330163428) do
+ActiveRecord::Schema.define(version: 20160331025614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -534,6 +534,9 @@ ActiveRecord::Schema.define(version: 20160330163428) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "subscribed_users"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
   end
 
   add_index "parks", ["assigned_to"], name: "index_parks_on_assigned_to", using: :btree
