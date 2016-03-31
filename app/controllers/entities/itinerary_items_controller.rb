@@ -35,6 +35,10 @@ class ItineraryItemsController < EntitiesController
     respond_with(@itinerary_item)
   end
 
+  def add_transportation
+    respond_with(@itinerary_item)
+  end
+
   def add_snack
     respond_with(@itinerary_item)
   end

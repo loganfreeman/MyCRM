@@ -1,0 +1,11 @@
+- entity_name = "snack"
+- create_id = "add_snack"
+
+crm.flick('empty', 'toggle');
+crm.flip_form('#{create_id}');
+
+- unless params[:cancel].true?
+  $('##{create_id}').html('#{ j render(:partial => "add_snack") }');
+  crm.set_title('#{create_id}', '#{ j t(create_id) }');
+- else
+  crm.set_title('#{create_id}', '#{ j t(entity_name.pluralize) }');
