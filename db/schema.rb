@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331025614) do
+ActiveRecord::Schema.define(version: 20160331041933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,6 +99,10 @@ ActiveRecord::Schema.define(version: 20160331025614) do
     t.float   "lon"
     t.string  "iata_code"
     t.string  "local_code"
+    t.string  "country"
+    t.float   "altitude"
+    t.integer "timezone"
+    t.string  "dst"
   end
 
   add_index "airports", ["ident"], name: "index_airports_on_ident", using: :btree

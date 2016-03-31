@@ -5,6 +5,32 @@
 #------------------------------------------------------------------------------
 namespace :ffcrm do
   namespace :update_data do
+
+    desc "load airport codes"
+    task load_airport: :environment do
+      require "csv"
+      require "json"
+
+      airport_data = {}
+
+      CSV.foreach(Rails.root.join('lib', "airports.dat")) do |row|
+        attributes = {
+          :name => row[1],
+          :city => row[2],
+          :country => row[3],
+          :iata_code => row[4],
+          :local_code => row[5],
+          :lat => row[6],
+          :lon => row[7],
+          :altitude => row[8],
+          :timezone => row[9],
+          :dst => row[10]
+        }
+        Airport.create(attributes)
+      end
+
+    end
+
     desc "Load park data into database"
     task load_parks: :environment do
       parks = YAML.load(File.read(Rails.root.join('lib', 'amusement_parks.yml')))
