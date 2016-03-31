@@ -374,6 +374,9 @@ en-US:
   room_number: number of rooms to reserve
   unit_cost: Unit Cost
   car_number: number of cars to rent
+  edit_transportation: Edit Transportation 
+  edit_hotel_reservation: Edit Hotel Reservation
+  edit_guide_driver: Edit Guide & Driver
 
   # Views -> Hotels
   hotel: Hotel
