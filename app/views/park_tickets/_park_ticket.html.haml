@@ -1,0 +1,25 @@
+%li.highlight[park_ticket]
+
+  %ul.tools
+    = hook(:park_ticket_tools_before, self, :park_ticket => park_ticket)
+
+    - if can?(:update, park_ticket)
+      %li= link_to(t(:edit), url_for(park_ticket))
+
+    - if shown_on_landing_page?
+      %li= link_to_discard(park_ticket)
+
+    - if can?(:destroy, park_ticket)
+      %li= link_to_delete(park_ticket)
+
+  .indentslim
+    = link_to_if can?(:read, park_ticket), park_ticket.id, park_ticket
+
+    %dt{ :style => "padding: 2px 0px 0px 0px" }
+      = t(:added_ago, value: timeago(park_ticket.created_at)).html_safe
+
+    - if park_ticket.tag_list.present?
+      %dt
+        .tags= tags_for_index(park_ticket)
+
+    = hook(:park_ticket_bottom, self, :park_ticket => park_ticket)
