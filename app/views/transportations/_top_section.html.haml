@@ -1,0 +1,19 @@
+= hook(:transportation_top_section, self, :f => f) do
+  .section
+    %table
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :car}:
+          = f.text_field :car, :autofocus => true
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :car_number}:
+          = f.number_field :car_number
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :unit_cost}:
+          = f.number_field :unit_cost
+
+      = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
+
+      = hook(:transportation_top_section_bottom, self, :f => f)

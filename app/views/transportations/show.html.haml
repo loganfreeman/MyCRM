@@ -1,0 +1,27 @@
+%div
+  .title_tools
+    #buttons
+      = view_buttons
+    .edit_asset
+      = link_to_inline(:edit_transportation, edit_transportation_path(@transportation), :text => t(:edit))
+
+  = subtitle :general_info_subtitle, false, t(:general_info)
+  %div.section
+    %div
+      .remote#edit_transportation{ hidden }
+      %table
+        %tr
+          %td
+            .label #{t :car}:
+          %td
+            = @transportation.car
+        %tr
+          %td
+            .label #{t :car_number}:
+          %td
+            = @transportation.car_number
+        %tr
+          %td
+            .label #{t :unit_cost}:
+          %td
+            = @transportation.unit_cost

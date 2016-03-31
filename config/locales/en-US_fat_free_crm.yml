@@ -373,6 +373,7 @@ en-US:
   hotel_name: Hotel Name
   room_number: number of rooms to reserve
   unit_cost: Unit Cost
+  car_number: number of cars to rent
 
   # Views -> Hotels
   hotel: Hotel

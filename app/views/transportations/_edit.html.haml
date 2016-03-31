@@ -1,0 +1,17 @@
+= simple_form_for(@transportation, :html => one_submit_only, :remote => true) do |f|
+  = link_to_close edit_transportation_path
+
+  = f.error_messages :object_name => t('transportation')
+
+  = render "transportations/top_section",    :f => f
+  = render "fields/edit_custom_field_group", :f => f
+  = render "fields/groups",        :f => f
+  = hook(:entity_form, self, {f: f, entity: @transportation})
+
+  .buttonbar
+    - if Setting.compound_address
+      = f.submit t(:edit_transportation), :onclick => "crm.clear_all_hints()"
+    - else
+      = f.submit t(:edit_transportation)
+    #{t :or}
+    = link_to_cancel edit_transportation_path

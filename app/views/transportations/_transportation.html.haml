@@ -1,0 +1,25 @@
+%li.highlight[transportation]
+
+  %ul.tools
+    = hook(:transportation_tools_before, self, :transportation => transportation)
+
+    - if can?(:update, transportation)
+      %li= link_to(t(:edit), url_for(transportation))
+
+    - if shown_on_landing_page?
+      %li= link_to_discard(transportation)
+
+    - if can?(:destroy, transportation)
+      %li= link_to_delete(transportation)
+
+  .indentslim
+    = link_to_if can?(:read, transportation), transportation.id, transportation
+
+    %dt{ :style => "padding: 2px 0px 0px 0px" }
+      = t(:added_ago, value: timeago(transportation.created_at)).html_safe
+
+    - if transportation.tag_list.present?
+      %dt
+        .tags= tags_for_index(transportation)
+
+    = hook(:transportation_bottom, self, :transportation => transportation)
