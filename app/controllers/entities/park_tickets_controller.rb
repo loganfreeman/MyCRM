@@ -3,7 +3,7 @@
 # Fat Free CRM is freely distributable under the terms of MIT license.
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
-class Park_ticketsController < EntitiesController
+class ParkTicketsController < EntitiesController
   before_action :get_park_tickets, only: [:new, :create, :edit, :update]
 
   # GET /Park_tickets
