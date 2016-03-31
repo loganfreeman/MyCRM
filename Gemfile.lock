@@ -280,6 +280,8 @@ GEM
       activemodel (~> 4.0)
     rails3-jquery-autocomplete (1.0.15)
       rails (>= 3.2)
+    rails4-autocomplete (1.1.1)
+      rails (>= 3.0)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
@@ -470,6 +472,7 @@ DEPENDENCIES
   rails-erd
   rails-observers
   rails3-jquery-autocomplete
+  rails4-autocomplete
   rails_12factor
   rails_autolink
   ransack (~> 1.6.2)

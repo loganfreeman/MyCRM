@@ -1,0 +1,19 @@
+= hook(:park_ticket_top_section, self, :f => f) do
+  .section
+    %table
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :park}:
+          = f.autocomplete_field :park, autocomplete_park_name_park_tickets_path, :autofocus => true
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :currency}:
+          = f.text_field :currency
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :cost}:
+          = f.number_field :cost
+
+      = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
+
+      = hook(:park_ticket_top_section_bottom, self, :f => f)

@@ -6,6 +6,8 @@
 class ParkTicketsController < EntitiesController
   before_action :get_park_tickets, only: [:new, :create, :edit, :update]
 
+  autocomplete :park, :name
+
   # GET /Park_tickets
   #----------------------------------------------------------------------------
   def index

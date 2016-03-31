@@ -143,6 +143,7 @@ Rails.application.routes.draw do
       match :auto_complete, via: [:get, :post]
       get :redraw
       get :versions
+      get :autocomplete_park_name
     end
     member do
       put :attach
