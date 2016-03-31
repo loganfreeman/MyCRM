@@ -5,6 +5,13 @@
 #------------------------------------------------------------------------------
 namespace :ffcrm do
   namespace :update_data do
+    desc "Load park data into database"
+    task load_parks: :environment do
+      parks = YAML.load(File.read(Rails.root.join('lib', 'amusement_parks.yml')))
+      parks.each do |park|
+        Park.create(park)
+      end
+    end
     #
     # Important note about countries. Please read carefully!
     #
