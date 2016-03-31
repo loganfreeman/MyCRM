@@ -1,7 +1,7 @@
 class Snack < ActiveRecord::Migration
   def self.up
     create_table :snacks do |t|
-      t.belongs_to :itinerary_items
+      t.belongs_to :itinerary_item
 
       t.string :kind
       t.string :description

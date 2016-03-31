@@ -1,7 +1,7 @@
 class CreateGuideDriver < ActiveRecord::Migration
   def self.up
     create_table :guide_drivers do |t|
-      t.belongs_to :itinerary_items
+      t.belongs_to :itinerary_item
       t.timestamps
       t.integer :guide
       t.integer :driver

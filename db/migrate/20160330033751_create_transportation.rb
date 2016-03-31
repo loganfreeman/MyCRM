@@ -1,7 +1,7 @@
 class CreateTransportation < ActiveRecord::Migration
   def self.up
     create_table :transportations do |t|
-      t.belongs_to :itinerary_items
+      t.belongs_to :itinerary_item
       t.timestamps
       t.string :car
       t.integer :car_number

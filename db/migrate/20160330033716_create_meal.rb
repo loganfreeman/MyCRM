@@ -1,7 +1,7 @@
 class CreateMeal < ActiveRecord::Migration
   def self.up
     create_table :meals do |t|
-      t.belongs_to :itinerary_items
+      t.belongs_to :itinerary_item
       t.timestamps
 
       t.decimal :breakfast, precision: 7, scale: 2
