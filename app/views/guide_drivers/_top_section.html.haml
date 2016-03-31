@@ -1,0 +1,28 @@
+= hook(:guide_driver_top_section, self, :f => f) do
+  .section
+    %table
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :tip}:
+          = f.number_field :tip, :autofocus => true
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :other}:
+          = f.number_field :other
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :overtime}:
+          = f.number_field :overtime
+
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :guide}:
+          = f.autocomplete_field :guide, auto_complete_rails4_contacts_path, :update_elements => {:id => '#guide_driver_guide'}
+      %tr
+        %td
+          .label.top{ :class => 'req' } #{t :driver}:
+          = f.autocomplete_field :driver, auto_complete_rails4_contacts_path, :update_elements => {:id => '#guide_driver_driver'}
+
+      = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
+
+      = hook(:guide_driver_top_section_bottom, self, :f => f)

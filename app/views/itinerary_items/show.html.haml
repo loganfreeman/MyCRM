@@ -73,7 +73,7 @@
   = subtitle :add_guide_and_driver_subtitle, false, t(:add_guide_and_driver)
   %div.section
     %div
-      .remote#add_guide_and_driver{ hidden }
+      .remote#add_guide_driver{ hidden }
       .list#guide_drivers
         - if @itinerary_item.guide_drivers.any?
           = render :partial => "guide_drivers/guide_driver", :collection => @itinerary_item.guide_drivers

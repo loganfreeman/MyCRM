@@ -1,0 +1,19 @@
+- snack = @itinerary_item.snacks.new
+= simple_form_for(snack, :html => one_submit_only, :remote => true) do |f|
+  = link_to_close new_snack_path
+  = f.hidden_field 'itinerary_item_id', :value => @itinerary_item.id
+
+  = f.error_messages :object_name => t('snack')
+
+  = render "snacks/top_section",    :f => f
+  = render "fields/edit_custom_field_group", :f => f
+  = render "fields/groups",        :f => f
+  = hook(:entity_form, self, {f: f, entity: @snack})
+
+  .buttonbar
+    - if Setting.compound_address
+      = f.submit t(:create_snack), :onclick => "crm.clear_all_hints()"
+    - else
+      = f.submit t(:create_snack)
+    #{t :or}
+    = link_to_cancel new_snack_path

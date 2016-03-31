@@ -1,0 +1,17 @@
+= simple_form_for(@guide_driver, :html => one_submit_only, :remote => true) do |f|
+  = link_to_close edit_guide_driver_path
+
+  = f.error_messages :object_name => t('guide_driver')
+
+  = render "guide_drivers/top_section",    :f => f
+  = render "fields/edit_custom_field_group", :f => f
+  = render "fields/groups",        :f => f
+  = hook(:entity_form, self, {f: f, entity: @guide_driver})
+
+  .buttonbar
+    - if Setting.compound_address
+      = f.submit t(:edit_guide_driver), :onclick => "crm.clear_all_hints()"
+    - else
+      = f.submit t(:edit_guide_driver)
+    #{t :or}
+    = link_to_cancel edit_guide_driver_path

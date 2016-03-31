@@ -384,6 +384,7 @@ Rails.application.routes.draw do
       match :auto_complete, via: [:get, :post]
       get :redraw
       get :versions
+      get :auto_complete_rails4
     end
     member do
       put :attach

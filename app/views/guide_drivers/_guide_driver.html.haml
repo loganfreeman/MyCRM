@@ -1,0 +1,25 @@
+%li.highlight[guide_driver]
+
+  %ul.tools
+    = hook(:guide_driver_tools_before, self, :guide_driver => guide_driver)
+
+    - if can?(:update, guide_driver)
+      %li= link_to(t(:edit), url_for(guide_driver))
+
+    - if shown_on_landing_page?
+      %li= link_to_discard(guide_driver)
+
+    - if can?(:destroy, guide_driver)
+      %li= link_to_delete(guide_driver)
+
+  .indentslim
+    = link_to_if can?(:read, guide_driver), guide_driver.id, guide_driver
+
+    %dt{ :style => "padding: 2px 0px 0px 0px" }
+      = t(:added_ago, value: timeago(guide_driver.created_at)).html_safe
+
+    - if guide_driver.tag_list.present?
+      %dt
+        .tags= tags_for_index(guide_driver)
+
+    = hook(:guide_driver_bottom, self, :guide_driver => guide_driver)

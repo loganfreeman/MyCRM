@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   # Common auto_complete handler for all core controllers.
   #----------------------------------------------------------------------------
   def auto_complete
-    @query = params[:auto_complete_query] || ''
+    @query = params[:auto_complete_query] || params[:term] || ''
     @auto_complete = hook(:auto_complete, self, query: @query, user: current_user)
     if @auto_complete.empty?
       exclude_ids = auto_complete_ids_to_exclude(params[:related])
@@ -44,6 +44,31 @@ class ApplicationController < ActionController::Base
         render json: @auto_complete.inject({}){|h, a|
                        h[a.id] = a.respond_to?(:full_name) ? h(a.full_name) : h(a.name); h
                      }
+      end
+    end
+  end
+
+
+  def auto_complete_rails4
+    @query = params[:auto_complete_query] || params[:term] || ''
+    @auto_complete = hook(:auto_complete, self, query: @query, user: current_user)
+    if @auto_complete.empty?
+      exclude_ids = auto_complete_ids_to_exclude(params[:related])
+      @auto_complete = klass.my.text_search(@query).search(id_not_in: exclude_ids).result.limit(10)
+    else
+      @auto_complete = @auto_complete.last
+    end
+
+    session[:auto_complete] = controller_name.to_sym
+    respond_to do |format|
+      format.any(:js, :html)   { render partial: 'auto_complete' }
+      format.json do
+        render json: @auto_complete.inject([]){|r, a|
+                       new_item = {}
+                       new_item[:id] = a.id
+                       new_item[:label] = a.respond_to?(:full_name) ? h(a.full_name) : h(a.name)
+                       r << new_item
+                     }, :root => false
       end
     end
   end

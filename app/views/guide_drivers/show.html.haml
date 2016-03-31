@@ -1,0 +1,27 @@
+%div
+  .title_tools
+    #buttons
+      = view_buttons
+    .edit_asset
+      = link_to_inline(:edit_guide_driver, edit_guide_driver_path(@guide_driver), :text => t(:edit))
+
+  = subtitle :general_info_subtitle, false, t(:general_info)
+  %div.section
+    %div
+      .remote#edit_guide_driver{ hidden }
+      %table
+        %tr
+          %td
+            .label #{t :breakfast}:
+          %td
+            = @guide_driver.breakfast
+        %tr
+          %td
+            .label #{t :lunch}:
+          %td
+            = @guide_driver.lunch
+        %tr
+          %td
+            .label #{t :dinner}:
+          %td
+            = @guide_driver.dinner
