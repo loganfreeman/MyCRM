@@ -370,6 +370,9 @@ en-US:
   add_guide_and_driver: Guide and driver
   add_guide_and_driver_intro: Add guide and driver information to the itinerary item
   edit_meal: Edit Meal
+  hotel_name: Hotel Name
+  room_number: number of rooms to reserve
+  unit_cost: Unit Cost
 
   # Views -> Hotels
   hotel: Hotel

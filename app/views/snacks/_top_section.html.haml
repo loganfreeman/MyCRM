@@ -1,19 +1,19 @@
-= hook(:meal_top_section, self, :f => f) do
+= hook(:snack_top_section, self, :f => f) do
   .section
     %table
       %tr
         %td
-          .label.top{ :class => 'req' } #{t :breakfast}:
-          = f.number_field :breakfast, :autofocus => true
+          .label.top{ :class => 'req' } #{t :description}:
+          = f.text_field :description, :autofocus => true
       %tr
         %td
-          .label.top{ :class => 'req' } #{t :lunch}:
-          = f.number_field :lunch
+          .label.top{ :class => 'req' } #{t :cost}:
+          = f.number_field :cost
       %tr
         %td
-          .label.top{ :class => 'req' } #{t :dinner}:
-          = f.number_field :dinner
+          .label.top{ :class => 'req' } #{t :kind}:
+          = f.text_field :kind
 
       = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
 
-      = hook(:meal_top_section_bottom, self, :f => f)
+      = hook(:snack_top_section_bottom, self, :f => f)

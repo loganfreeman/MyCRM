@@ -1,0 +1,25 @@
+%li.highlight[hotel_reservation]
+
+  %ul.tools
+    = hook(:hotel_reservation_tools_before, self, :hotel_reservation => hotel_reservation)
+
+    - if can?(:update, hotel_reservation)
+      %li= link_to(t(:edit), url_for(hotel_reservation))
+
+    - if shown_on_landing_page?
+      %li= link_to_discard(hotel_reservation)
+
+    - if can?(:destroy, hotel_reservation)
+      %li= link_to_delete(hotel_reservation)
+
+  .indentslim
+    = link_to_if can?(:read, hotel_reservation), hotel_reservation.id, hotel_reservation
+
+    %dt{ :style => "padding: 2px 0px 0px 0px" }
+      = t(:added_ago, value: timeago(hotel_reservation.created_at)).html_safe
+
+    - if hotel_reservation.tag_list.present?
+      %dt
+        .tags= tags_for_index(hotel_reservation)
+
+    = hook(:hotel_reservation_bottom, self, :hotel_reservation => hotel_reservation)

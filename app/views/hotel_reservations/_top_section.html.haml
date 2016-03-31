@@ -3,16 +3,16 @@
     %table
       %tr
         %td
-          .label.top{ :class => 'req' } #{t :breakfast}:
-          = f.number_field :breakfast, :autofocus => true
+          .label.top{ :class => 'req' } #{t :hotel_name}:
+          = f.text_field :hotel_name, :autofocus => true
       %tr
         %td
-          .label.top{ :class => 'req' } #{t :lunch}:
-          = f.number_field :lunch
+          .label.top{ :class => 'req' } #{t :room_number}:
+          = f.number_field :room_number
       %tr
         %td
-          .label.top{ :class => 'req' } #{t :dinner}:
-          = f.number_field :dinner
+          .label.top{ :class => 'req' } #{t :unit_cost}:
+          = f.number_field :unit_cost
 
       = render :partial => "/shared/tags", :locals => {:f => f, :span => 3}
 

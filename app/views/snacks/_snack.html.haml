@@ -1,0 +1,25 @@
+%li.highlight[snack]
+
+  %ul.tools
+    = hook(:snack_tools_before, self, :snack => snack)
+
+    - if can?(:update, snack)
+      %li= link_to(t(:edit), url_for(snack))
+
+    - if shown_on_landing_page?
+      %li= link_to_discard(snack)
+
+    - if can?(:destroy, snack)
+      %li= link_to_delete(snack)
+
+  .indentslim
+    = link_to_if can?(:read, snack), snack.id, snack
+
+    %dt{ :style => "padding: 2px 0px 0px 0px" }
+      = t(:added_ago, value: timeago(snack.created_at)).html_safe
+
+    - if snack.tag_list.present?
+      %dt
+        .tags= tags_for_index(snack)
+
+    = hook(:snack_bottom, self, :snack => snack)

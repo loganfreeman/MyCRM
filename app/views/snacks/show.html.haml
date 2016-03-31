@@ -3,25 +3,25 @@
     #buttons
       = view_buttons
     .edit_asset
-      = link_to_inline(:edit_meal, edit_meal_path(@meal), :text => t(:edit))
+      = link_to_inline(:edit_snack, edit_snack_path(@snack), :text => t(:edit))
 
   = subtitle :general_info_subtitle, false, t(:general_info)
   %div.section
     %div
-      .remote#edit_meal{ hidden }
+      .remote#edit_snack{ hidden }
       %table
         %tr
           %td
-            .label #{t :breakfast}:
+            .label #{t :description}:
           %td
-            = @meal.breakfast
+            = @snack.description
         %tr
           %td
-            .label #{t :lunch}:
+            .label #{t :kind}:
           %td
-            = @meal.lunch
+            = @snack.kind
         %tr
           %td
-            .label #{t :dinner}:
+            .label #{t :cost}:
           %td
-            = @meal.dinner
+            = @snack.cost
