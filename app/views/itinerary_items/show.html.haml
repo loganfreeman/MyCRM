@@ -37,8 +37,12 @@
   %div.section
     %div
       .remote#add_snack{ hidden }
-      %small#add_snack_intro
-        = t(:add_snack)
+      .list#snacks
+        - if @itinerary_item.snacks.any?
+          = render :partial => "snacks/snack", :collection => @itinerary_item.snacks
+        - else
+          #empty
+            == #{t :feel_free} #{link_to(t(:create_snack), add_snack_itinerary_item_path(@itinerary_item), :remote => true)}.
 
 
 %div
@@ -46,31 +50,47 @@
   %div.section
     %div
       .remote#add_hotel_reservation{ hidden }
-      %small#add_hotel_reservation_intro
-        = t(:add_hotel_reservation)
+      .list#hotel_reservations
+        - if @itinerary_item.hotel_reservations.any?
+          = render :partial => "hotel_reservations/hotel_reservation", :collection => @itinerary_item.hotel_reservations
+        - else
+          #empty
+            == #{t :feel_free} #{link_to(t(:create_hotel_reservation), add_hotel_reservation_itinerary_item_path(@itinerary_item), :remote => true)}.
 
 %div
   = subtitle :add_transportation_subtitle, false, t(:add_transportation)
   %div.section
     %div
       .remote#add_transportation{ hidden }
-      %small#add_transportation_intro
-        = t(:add_transportation)
+      .list#transportations
+        - if @itinerary_item.transportations.any?
+          = render :partial => "transportations/transportation", :collection => @itinerary_item.transportations
+        - else
+          #empty
+            == #{t :feel_free} #{link_to(t(:create_transportation), add_transportation_itinerary_item_path(@itinerary_item), :remote => true)}.
 
 %div
   = subtitle :add_guide_and_driver_subtitle, false, t(:add_guide_and_driver)
   %div.section
     %div
       .remote#add_guide_and_driver{ hidden }
-      %small#add_guide_and_driver_intro
-        = t(:add_guide_and_driver)
+      .list#guide_drivers
+        - if @itinerary_item.guide_drivers.any?
+          = render :partial => "guide_drivers/guide_driver", :collection => @itinerary_item.guide_drivers
+        - else
+          #empty
+            == #{t :feel_free} #{link_to(t(:create_guide_driver), add_guide_driver_itinerary_item_path(@itinerary_item), :remote => true)}.
 
 %div
   = subtitle :add_park_ticket_subtitle, false, t(:add_park_ticket)
   %div.section
     %div
       .remote#add_park_ticket{ hidden }
-      %small#add_park_ticket_intro
-        = t(:add_park_ticket)
+      .list#park_tickets
+        - if @itinerary_item.park_tickets.any?
+          = render :partial => "park_tickets/park_ticket", :collection => @itinerary_item.park_tickets
+        - else
+          #empty
+            == #{t :feel_free} #{link_to(t(:create_park_ticket), add_park_ticket_itinerary_item_path(@itinerary_item), :remote => true)}.
 %div
   #export= render "shared/export"

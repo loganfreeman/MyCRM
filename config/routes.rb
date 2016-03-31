@@ -86,10 +86,115 @@ Rails.application.routes.draw do
       post :unsubscribe
       get :opportunities
       match :add_meal, via: [:get, :post]
+      match :add_snack, via: [:get, :post]
+      match :add_hotel_reservation, via: [:get, :post]
+      match :add_transportation, via: [:get, :post]
+      match :add_park_ticket, via: [:get, :post]
+      match :add_guide_driver, via: [:get, :post]
     end
   end
 
   resources :meals, id: /\d+/ do
+    collection do
+      get :advanced_search
+      post :filter
+      get :options
+      get :field_group
+      match :auto_complete, via: [:get, :post]
+      get :redraw
+      get :versions
+    end
+    member do
+      put :attach
+      post :discard
+      post :subscribe
+      post :unsubscribe
+      get :contacts
+      get :opportunities
+    end
+  end
+
+  resources :guide_drivers, id: /\d+/ do
+    collection do
+      get :advanced_search
+      post :filter
+      get :options
+      get :field_group
+      match :auto_complete, via: [:get, :post]
+      get :redraw
+      get :versions
+    end
+    member do
+      put :attach
+      post :discard
+      post :subscribe
+      post :unsubscribe
+      get :contacts
+      get :opportunities
+    end
+  end
+
+  resources :park_tickets, id: /\d+/ do
+    collection do
+      get :advanced_search
+      post :filter
+      get :options
+      get :field_group
+      match :auto_complete, via: [:get, :post]
+      get :redraw
+      get :versions
+    end
+    member do
+      put :attach
+      post :discard
+      post :subscribe
+      post :unsubscribe
+      get :contacts
+      get :opportunities
+    end
+  end
+
+  resources :transportations, id: /\d+/ do
+    collection do
+      get :advanced_search
+      post :filter
+      get :options
+      get :field_group
+      match :auto_complete, via: [:get, :post]
+      get :redraw
+      get :versions
+    end
+    member do
+      put :attach
+      post :discard
+      post :subscribe
+      post :unsubscribe
+      get :contacts
+      get :opportunities
+    end
+  end
+
+  resources :hotel_reservations, id: /\d+/ do
+    collection do
+      get :advanced_search
+      post :filter
+      get :options
+      get :field_group
+      match :auto_complete, via: [:get, :post]
+      get :redraw
+      get :versions
+    end
+    member do
+      put :attach
+      post :discard
+      post :subscribe
+      post :unsubscribe
+      get :contacts
+      get :opportunities
+    end
+  end
+
+  resources :snacks, id: /\d+/ do
     collection do
       get :advanced_search
       post :filter

@@ -353,6 +353,11 @@ en-US:
   edit_itinerary_item: Edit Itinerary Item
   add_meal: Meals
   create_meal: Add a meal
+  create_snack: Add snack
+  create_hotel_reservation: Add hotel reservation
+  create_transportation: Add transportation
+  create_park_ticket: Add park tickets
+  create_guide_driver: Add guide and driver information
   add_meal_intro: Add meals to the itinerary item
   add_hotel_reservation: Hotel reservation
   add_hotel_reservation_intro: Add hotel reservations to the itinerary item

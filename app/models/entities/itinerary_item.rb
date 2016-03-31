@@ -5,6 +5,11 @@ class ItineraryItem < ActiveRecord::Base
   uses_comment_extensions
   acts_as_taggable_on :tags
   has_many :meals
+  has_many :snacks
+  has_many :hotel_reservations
+  has_many :transportations
+  has_many :guide_drivers
+  has_many :park_tickets
   has_paper_trail class_name: 'Version', ignore: [:subscribed_users]
   has_fields
   exportable
