@@ -9,20 +9,20 @@ config/deploy.rb
 !config/settings.default.yml
 
 .rspec
-spec/reports
-spec/internal/public/avatars
-spec/internal/public/assets
-coverage/*
-db/*.sql*
-log/*.log
-doc/
-vendor/bundle
+/spec/reports
+/spec/internal/public/avatars
+/spec/internal/public/assets
+/coverage/*
+/db/*.sql*
+/log/*.log
+/doc/
+/vendor/bundle
 Gemfile.ci.lock
 
-public/avatars/**/*
-public/assets
+/public/avatars/**/*
+/public/assets
 
-tmp
+/tmp/
 Design
 .bundle
 .idea/
