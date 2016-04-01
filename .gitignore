@@ -18,7 +18,6 @@ log/*.log
 doc/
 vendor/bundle
 Gemfile.ci.lock
-Gemfile.lock
 
 public/avatars/**/*
 public/assets
