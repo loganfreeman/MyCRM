@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.4"
+ruby "2.1.5"
 
 # Uncomment the database that you have configured in config/database.yml
 # ----------------------------------------------------------------------
@@ -83,7 +83,7 @@ gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
 gem 'mysql2'
 gem 'rails_12factor', group: :production
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'tzinfo-data'
 gem 'table_cloth'
 gem 'grape'
 gem 'angularjs-rails'
