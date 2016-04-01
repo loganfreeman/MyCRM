@@ -20,6 +20,15 @@ en-US:
   conference: Conferences
   exibition: Exibitions
   description: Description
+  breakfast: Breakfast
+  lunch: Lunch
+  dinner: Dinner
+  kind: Kind
+  cost: Cost
+  car: Car
+  tip: Tip
+  other: Other
+  overtime: Overtime 
 
 
   # Settings.

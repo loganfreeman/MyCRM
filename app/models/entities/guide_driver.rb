@@ -6,4 +6,19 @@ class GuideDriver < ActiveRecord::Base
   has_fields
   exportable
   sortable by: ["created_at DESC", "updated_at DESC"], default: "created_at DESC"
+  def guide_contact
+    if guide.present?
+      Contact.find_by_id(guide)
+    else
+      { full_name: ""}
+    end
+  end
+
+  def driver_contact
+    if driver.present?
+      Contact.find_by_id(driver)
+    else
+      { full_name: ""}
+    end
+  end
 end
