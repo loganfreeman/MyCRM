@@ -10,7 +10,7 @@ class GuideDriver < ActiveRecord::Base
     if guide.present?
       Contact.find_by_id(guide)
     else
-      { full_name: ""}
+      Contact.new
     end
   end
 
@@ -18,7 +18,7 @@ class GuideDriver < ActiveRecord::Base
     if driver.present?
       Contact.find_by_id(driver)
     else
-      { full_name: ""}
+      Contact.new
     end
   end
 end
