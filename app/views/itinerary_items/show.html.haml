@@ -18,7 +18,7 @@
           %td= spacer
           %td
             .label #{t :order_date}:
-            = @itinerary_item.order_date
+            = @itinerary_item.order_date.to_date
 
 %div
   = subtitle :add_meal_subtitle, false, t(:add_meal)
