@@ -13,3 +13,5 @@
   = hook(:show_itinerary_bottom, self, {entity: @itinerary}) do
 
     = render :partial => "versions/versions", :locals => {:object => @itinerary}
+
+  = render "shared/export"

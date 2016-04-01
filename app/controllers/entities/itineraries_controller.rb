@@ -3,10 +3,25 @@ class ItinerariesController < EntitiesController
   alias_method :get_itineraries, :get_list_of_records
 
   def index
-    @itineraries = get_itineraries(page: params[:page], per_page: params[:per_page])
-    respond_with @itineraries do |format|
+    if params[:id].present?
+      @itinerary = Itinerary.find_by_id(params[:id])
+      respond_with @itinerary do |format|
+        format.xls { render layout: 'header' }
+        format.csv { render csv: @itinerary }
+      end
+    else
+      @itineraries = get_itineraries(page: params[:page], per_page: params[:per_page])
+      respond_with @itineraries do |format|
+        format.xls { render layout: 'header' }
+        format.csv { render csv: @itineraries }
+      end
+    end
+  end
+
+  def show
+    respond_with @itinerary do |format|
       format.xls { render layout: 'header' }
-      format.csv { render csv: @itineraries }
+      format.csv { render csv: @itinerary }
     end
   end
 
