@@ -1,7 +1,11 @@
 %li.highlight[itinerary_item]
 
   .indentslim
-    = link_to content_tag(:span, itinerary_item.description, class: "truncate"), itinerary_item
+    = link_to content_tag(:span, "#{itinerary_item.order_date.to_date}"), itinerary_item
+
+    %dt
+      = "#{itinerary_item.description}"
+
 
     - if itinerary_item.tag_list.present?
       %dt
