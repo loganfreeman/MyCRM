@@ -10,5 +10,5 @@
 
 WickedPdf.config ||= {}
 WickedPdf.config.merge!({
-  exe_path: '/usr/local/bin/wkhtmltopdf'
+  exe_path: `which wkhtmltopdf`.chomp
 })
