@@ -8,6 +8,9 @@ class ItinerariesController < EntitiesController
       respond_with @itinerary do |format|
         format.xls { render layout: 'header' }
         format.csv { render csv: @itinerary }
+        format.pdf do
+          render :pdf => "report", :layout => 'pdf'
+        end
       end
     else
       @itineraries = get_itineraries(page: params[:page], per_page: params[:per_page])

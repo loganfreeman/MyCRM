@@ -385,7 +385,7 @@ module ApplicationHelper
     url_params.merge!(view: @view) unless @view.blank? # tasks
     url_params.merge!(id: params[:id]) unless params[:id].blank?
 
-    exports = %w(xls csv).map do |format|
+    exports = %w(xls csv pdf).map do |format|
       link_to(format.upcase, url_params.merge(format: format), title: I18n.t(:"to_#{format}")) unless action.to_s == "show"
     end
 

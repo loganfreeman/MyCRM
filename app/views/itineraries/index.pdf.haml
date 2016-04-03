@@ -1,0 +1,31 @@
+.container
+  .row
+    = wicked_pdf_image_tag('itinerary.jpeg')
+  .row
+    .col-xs-6
+      %h3
+        - if !@itinerary.nil?
+          = @itinerary.id
+      %p
+    .col-xs-6
+      %h3
+      %p
+  .row
+    %table.table.table-striped
+      %thead
+        %th Product ID
+        %th Product Name
+      %tbody
+        - if !@itineraries.nil? && @itineraries.length > 0
+          - @itineraries.each do |itinerary|
+            %tr
+              %td
+                = itinerary.id
+              %td
+                = itinerary.name
+        - elsif !@itinerary.nil?
+          %tr
+            %td
+              = itinerary.id
+            %td
+              = itinerary.name
