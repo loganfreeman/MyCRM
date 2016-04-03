@@ -28,7 +28,7 @@ en-US:
   car: Car
   tip: Tip
   other: Other
-  overtime: Overtime 
+  overtime: Overtime
 
 
   # Settings.
@@ -387,6 +387,8 @@ en-US:
   edit_transportation: Edit Transportation
   edit_hotel_reservation: Edit Hotel Reservation
   edit_guide_driver: Edit Guide & Driver
+  edit_snack: Edit snack
+  edit_park_ticket: Edit park ticket
 
   # Views -> Hotels
   hotel: Hotel

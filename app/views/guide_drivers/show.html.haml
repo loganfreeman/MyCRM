@@ -13,16 +13,26 @@
       %table
         %tr
           %td
-            .label #{t :breakfast}:
+            .label #{t :tip}
           %td
-            = @guide_driver.breakfast
+            = @guide_driver.tip
         %tr
           %td
-            .label #{t :lunch}:
+            .label #{t :other}
           %td
-            = @guide_driver.lunch
+            = @guide_driver.other
         %tr
           %td
-            .label #{t :dinner}:
+            .label #{t :overtime}
           %td
-            = @guide_driver.dinner
+            = @guide_driver.overtime
+        %tr
+          %td
+            .label #{t :guide}:
+          %td
+            = guide_name = @guide_driver.guide.present? ? Contact.find_by_id(@guide_driver.guide).full_name : t(:empty)
+        %tr
+          %td
+            .label #{t :driver}:
+          %td
+            = guide_name = @guide_driver.driver.present? ? Contact.find_by_id(@guide_driver.driver).full_name : t(:empty)
