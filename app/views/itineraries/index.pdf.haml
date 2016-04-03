@@ -2,8 +2,6 @@
   .row
     .col-xs-6
       %h3
-        - if !@itinerary.nil?
-          = @itinerary.id
       %p
     .col-xs-6
       %h3
@@ -11,8 +9,8 @@
   .row
     %table.table.table-striped
       %thead
-        %th Product ID
-        %th Product Name
+        %th ID
+        %th Name
       %tbody
         - if !@itineraries.nil? && @itineraries.length > 0
           - @itineraries.each do |itinerary|
@@ -21,9 +19,41 @@
                 = itinerary.id
               %td
                 = itinerary.name
-        - elsif !@itinerary.nil?
-          %tr
-            %td
-              = itinerary.id
-            %td
-              = itinerary.name
+    - if !@itinerary.nil? && @itinerary.itinerary_items.length > 0
+      - @itinerary.itinerary_items.each do |item|
+        .row
+          %h4
+            = item.order_date.to_date
+          %h4
+            = item.description
+        - meal = item.meals.first
+        - if !meal.nil?
+          %h4 meal section
+          .row
+            = "Breakfast #{meal.breakfast}"
+            = "Lunch #{meal.lunch}"
+            = "Dinner #{meal.dinner}"
+        - guide_driver = item.guide_drivers.first
+        - if !guide_driver.nil?
+          %h4 guide & driver section
+          - guide = Contact.find_by_id(guide_driver.guide)
+          - driver = Contact.find_by_id(guide_driver.driver)
+          - if !driver.nil?
+            .row
+              = "Driver #{driver.full_name}"
+          - if !guide.nil?
+            .row
+              = "Guide #{guide.full_name}"
+        - transportation = item.transportations.first
+        - if !transportation.nil?
+          %h4 transportation section
+          .row
+            = transportation.car
+            = transportation.car_number
+            = transportation.unit_cost
+        - park_ticket = item.park_tickets.first
+        - if !park_ticket.nil?
+          %h4 Park admission
+          .row
+            = park_ticket.park
+            = park_ticket.cost
